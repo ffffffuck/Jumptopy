@@ -15,5 +15,5 @@ while True:
     elif money >= 1000:
         print("동전만 넣어주세요")
     if coffee == 0 :
-        print("재고가 없습니다")
+        print("완판되었습니다")
         break
