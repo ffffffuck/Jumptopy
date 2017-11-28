@@ -33,12 +33,12 @@ while True:
             print('*', end='')
         for j in range(1, 2):
             print('|', end='')
-
         print()
+
     for q in range(1, a):
         for w in range(1,2):
             print('|', end='')
-        for w in range(2, q + 2):
+        for w in range(1, q + 1):
             print(' ', end='')
         for w in range(1,(2*a)-(2*q)):
             print('*', end='')
@@ -47,6 +47,7 @@ while True:
         for w in range(1,2):
             print('|', end='')
         print()
+
     for i in range(1, 2):
         for i in range(1, 2):
             print(' ', end='')
