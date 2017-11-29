@@ -7,10 +7,10 @@ while True:
     if a == 0:
         print("삼각형 연습 프로그램을 종료합니다. 감사합니다.")
 
-    for i in range(1,2):
-        print(' ', end='')
-        print('-'*2*a,end='')
-    print()
-
-    for i in range(1,a):
-        for i in range
+    for i in range(1,a+2):
+        if i%2 ==1: continue
+        for j in range(0,(a+2-i)//2):
+            print(' ', end='')
+        for j in range(1,i):
+            print('*', end='')
+        print()
