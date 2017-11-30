@@ -5,7 +5,7 @@ while True:
         print("올바른 수를 입력해주세요.")
         continue
     if a == 0:
-        print("마름모 연습프로그램을 이용해 주셔서 감사합니다.")
+        print("마름모 연습 프로그램을 이용해 주셔서 감사합니다.")
         break
 
     for i in range(1,2):

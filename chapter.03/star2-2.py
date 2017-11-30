@@ -7,6 +7,7 @@ while True:
     if a == 0:
         print("역삼각형 연습 프로그램을 종료합니다. 감사합니다.")
         break
+
     for i in range(1, a+2):
         if i % 2 == 1: continue
         for j in range(2, (i+2) // 2):

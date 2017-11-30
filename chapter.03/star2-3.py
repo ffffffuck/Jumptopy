@@ -7,6 +7,7 @@ while True:
     if a == 0:
         print("마름모 연습 프로그램을 종료합니다. 감사합니다.")
         break
+
     for i in range(1,2):
         for i in range(1,2):
             print(' ',end='')
