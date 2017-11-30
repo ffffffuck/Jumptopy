@@ -4,5 +4,5 @@ while True:
                 print("프로그램을 종료합니다")
                 break
         Y=int(input("Y값를 입력하세요:"))
-        for c in range(X*Y,10000,X*Y):
+        for c in range(X*Y,10001,X*Y):
                 print(c)
