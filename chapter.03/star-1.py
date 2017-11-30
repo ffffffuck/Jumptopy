@@ -8,50 +8,9 @@ while True:
         print("마름모 연습프로그램을 이용해 주셔서 감사합니다.")
         break
 
-    for i in range(1,2):
-        for i in range(1,2):
-            print(' ',end='')
-        for i in range(1,2):
-            print('-'*((2*a)-1))
-
-    for i in range(1,a):
-        for j in range(1,2):
-            print('|',end='')
-        for j in range(1,(a+1)-i):
+    for i in range(1,a+1):
+        for j in range(1,a+1-i):
             print(' ',end='')
         for j in range(1,(2*i)):
             print('*', end='')
-        for j in range(1,(a+1)-i):
-            print(' ', end='')
-        for j in range(1,2):
-            print('|', end='')
         print()
-
-    for i in range(1,2):
-        for j in range(1,2):
-            print('|', end='')
-        for i in range(1,2*a):
-            print('*', end='')
-        for j in range(1, 2):
-            print('|', end='')
-        print()
-
-    for q in range(1,a):
-        for w in range(1,2):
-            print('|', end='')
-        for w in range(1, q + 1):
-            print(' ', end='')
-        for w in range(1,(2*a)-(2*q)):
-            print('*', end='')
-        for w in range(1,q + 1):
-            print(' ', end='')
-        for w in range(1,2):
-            print('|', end='')
-        print()
-
-    for i in range(1,2):
-        for i in range(1,2):
-            print(' ', end='')
-        for i in range(1,2):
-            print('-' * ((2 * a) - 1))
-
