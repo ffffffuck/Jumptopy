@@ -6,4 +6,4 @@ while True:
         sum += i
     print("정답은 %s 입니다. " % sum)
     if a>b:
-        print("다시 입력하세요")
+        print("다시 입력하세요.")
