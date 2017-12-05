@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd697ace-07f6-4d92-a4e9-9184b6470fc4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Jumptopy.iml" afterPath="$PROJECT_DIR$/.idea/Jumptopy.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/181.py" afterPath="$PROJECT_DIR$/chapter.04/181.py" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-sandwich.py" afterPath="$PROJECT_DIR$/chapter.04/prac-sandwich.py" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/방명록.py" afterPath="$PROJECT_DIR$/chapter.04/방명록.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -336,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512375991829</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ㅇㅇ">
+      <created>1512474086888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1512474086888</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
