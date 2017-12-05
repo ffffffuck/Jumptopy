@@ -1,5 +1,5 @@
 class Service:
-    secret = "영구는 존나 못생겼다"
+    secret = "영구는 배꼽이 두개다"
     def setname(self,name):
         self.name = name
     def sum(self,a,b):
@@ -9,4 +9,10 @@ class Service:
 pey = Service()
 pey.setname('홍길동')
 
+
+#def 에서 setname 대신 __init__ 하면
+# 위에꺼랑
+#pey=service('홍길동')이랑 똑같음 ㅇㅋㅇㅋ
+
 pey.sum(1,2)
+print(pey.secret)

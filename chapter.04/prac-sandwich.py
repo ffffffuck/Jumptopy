@@ -22,6 +22,7 @@ def make_sandwiches():
         f=open("ingredient_list.txt", 'w')
         f.close()
 
+f=open("ingredient_list.txt", 'w')
 while True:
     a= int(input("안녕하세요 저희 가게에 방문해 주셔서 감사합니다\n1.주문\n2.종료\n입력:"))
     input_ingredient()
