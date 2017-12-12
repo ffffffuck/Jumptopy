@@ -1,9 +1,4 @@
-import sys
-
 def pythontoc():
-    learning_python = sys.argv[1]
-    learning_python_copied = sys.argv[2]
-
     f= open("learning_python.txt",'r')
     python = f.read()
     C_repl = python.replace("python", "C")
@@ -14,4 +9,4 @@ def pythontoc():
     f.write(C_repl)
     f.close()
 
-
+pythontoc()
