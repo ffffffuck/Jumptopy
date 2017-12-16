@@ -88,6 +88,3 @@ if option == '-v':
                 print(line)
 
 
-    # args = sys.argv[1:]
-    # for i in args:
-    #     print(i.upper(), end=' ')

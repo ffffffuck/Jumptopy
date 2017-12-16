@@ -1,4 +1,3 @@
-
 def getTotalPage(m,n):
     p = int(m/n)
     if m % n == 0:
@@ -20,7 +19,6 @@ while True:
         getTotalPage(m,n)
     except: pass
 
-# print("게시물 총건수:%s, 한페이지에 보여줄 게시물 수 : %s, 총페이지수: %s" %(m,n,p+1))
 
 
 
