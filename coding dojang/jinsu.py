@@ -1,10 +1,17 @@
 def jinsu(a, n):
-	a= 233
-	b=''
+	b = ''
+	c = 'ABCDEF'
 	while True:
-		b=b+(str(a%n))
+		r = a % n
+		if r < 10 :
+			b = b + str(r)
+		else:
+			r = c[r-10]
+			b = b + str(r)
 		a=a//n
 		if a < 1: break
-	print(''.join(reversed(b)))
+	b=''.join(reversed(b))
+	print(b)
 	
-jinsu(233,2)
+jinsu(233,16)
+

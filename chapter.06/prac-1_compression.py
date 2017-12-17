@@ -1,12 +1,9 @@
-N=str(input()+' ')
-a=''
-n=0
-for i in range(len(N)-1) :
-    if N[i] != N[i+1]:
-        a= a+N[i]+str(n)
+input = input('입력:')+' '
+result=''
+n=1
+for i in range(len(input)-1) :
+    if input[i] != input[i+1]:
+        result+=input[i]+str(n)
         n=1
-    elif N[i] == N[i+1]:
-        n+=1
-
-print(a)
-
+    else:n=n+1
+print(result)
