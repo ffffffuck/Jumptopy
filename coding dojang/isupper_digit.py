@@ -7,4 +7,3 @@ def replace(n):
     print(a)
 
 replace('codingDojang')
-

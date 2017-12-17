@@ -7,4 +7,3 @@ for i in range(10,1000+1):
         x=x*int(j)
     sum=sum+x
 print(sum)
-

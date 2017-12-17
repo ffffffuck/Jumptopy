@@ -14,4 +14,3 @@ def jinsu(a, n):
 	print(b)
 	
 jinsu(233,16)
-
