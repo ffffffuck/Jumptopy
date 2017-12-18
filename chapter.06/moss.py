@@ -8,7 +8,6 @@ dic = {
 input = '.... .  ... .-.. . . .--. ...  . .- .-. .-.. -.--'
 result=''
 for i in input.split(' '):
-    print(i)
     if i =='':
         result+=' '
     else:

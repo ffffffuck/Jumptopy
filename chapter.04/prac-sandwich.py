@@ -19,10 +19,11 @@ def make_sandwiches():
         for line in lines:
             print(line[:-1]+' 추가합니다')
         print('\n여기 주문하신 샌드위치 만들었습니다 맛있게 드세요\n')
-        f=open("ingredient_list.txt", 'w')
+        f.close()
+        f=open("ingredient_list.txt", 'a')
         f.close()
 
-f=open("ingredient_list.txt", 'w')
+f=open("ingredient_list.txt", 'a')
 while True:
     a= int(input("안녕하세요 저희 가게에 방문해 주셔서 감사합니다\n1.주문\n2.종료\n입력:"))
     input_ingredient()
