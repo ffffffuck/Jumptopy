@@ -13,4 +13,4 @@ def jinsu(a, n):
 	b=''.join(reversed(b))
 	print(b)
 	
-jinsu(233,16)
+jinsu(233,2)
