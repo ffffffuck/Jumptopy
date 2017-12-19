@@ -9,7 +9,7 @@ N=[i.split(' ') for i in input[1:-1].split('\n')]
 for i in N:
     a=i[0][::-1]
     b=i[1][::-1]
-    print(a,b)
+
     n = 0
     puton=0
     if len(str(a)) == len(str(b)):
@@ -33,6 +33,5 @@ for i in N:
         print('%s carry operation.' %n)
 
 
-print(ord('똘'))
 # len(str(int(a)+1))
 
