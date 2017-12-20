@@ -24,11 +24,36 @@ dic={
     'WXY':'9',
 }
 
+def find_key(n):
+	dic_a = list(dic)
+	for i in dic_a:
+		if n in i:
+			return dic[i]
 
-dic_a = list(dic)
+output=[]
+n=0
+input= input.split("\n")[1:-1]	
+for i in range(1, len(input)):
+	a=input[i]
+	for i in range(len(a)):
+		if a[i] == '-': continue
+		if a[i].isalpha(): 
+			output.append(find_key(a[i]))
+		else: output.append(a[i])
+		n=n+1
+		if n %7==0 : output.append('\n')				
+output=''.join(output)
+output= output.split('\n')[:-1]
+output=list(map(int, output))
+output.sort()
+output.reverse()
+count=0
+for i in range(len(output)-1):
+	if output.count(output[i]) > 1:
+		print(str(output[i])[:3], '-', str(output[i])[3:],output.count(output[i]))
+	else: print("no duplicated")
 
-# print(dic_a)
 
-if 'ABC' in dic:
-    print('true')
-else: print('false')
+print(output)
+print(input)		
+
