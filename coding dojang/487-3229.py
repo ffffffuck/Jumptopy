@@ -45,12 +45,15 @@ for i in range(1, len(input)):
 output=''.join(output)
 output= output.split('\n')[:-1]
 output=list(map(int, output))
-output.sort()
-output.reverse()
+countdic={}
 count=0
-for i in range(len(output)-1):
-	if output.count(output[i]) > 1:
-		print(str(output[i])[:3], '-', str(output[i])[3:],output.count(output[i]))
+for i in range(len(output)):
+	countdic[output[i]]= output.count(output[i])
+output=list(set(output))
+output.sort()
+for i in range(len(output)):
+	if countdic[output[i]] > 1:
+		print(str(output[i])[:3], '-', str(output[i])[3:],countdic[output[i]])
 	else: print("no duplicated")
 
 
