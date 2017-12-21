@@ -5,7 +5,7 @@ while b <4000000:
     a = a+b	
     b,a = a,b
     if a%2==0:
-	       n+=a
-    print(n)
+	    n+=a
+print(n)
 
 	

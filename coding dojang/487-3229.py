@@ -23,40 +23,25 @@ dic={
     'TUV':'8',
     'WXY':'9',
 }
-
 def find_key(n):
 	dic_a = list(dic)
 	for i in dic_a:
 		if n in i:
 			return dic[i]
 
-output=[]
-n=0
-input= input.split("\n")[1:-1]	
-for i in range(1, len(input)):
-	a=input[i]
-	for i in range(len(a)):
-		if a[i] == '-': continue
-		if a[i].isalpha(): 
-			output.append(find_key(a[i]))
-		else: output.append(a[i])
-		n=n+1
-		if n %7==0 : output.append('\n')				
-output=''.join(output)
-output= output.split('\n')[:-1]
-output=list(map(int, output))
-countdic={}
-count=0
-for i in range(len(output)):
-	countdic[output[i]]= output.count(output[i])
-output=list(set(output))
-output.sort()
-for i in range(len(output)):
-	if countdic[output[i]] > 1:
-		print(str(output[i])[:3], '-', str(output[i])[3:],countdic[output[i]])
-	else: print("no duplicated")
+count_dic={}
+input= input.split("\n")[2:-1]
+for i in range(len(input)):
+	input[i]= input[i].replace("-","")
+	input[i]=input[i][:3]+'-'+input[i][3:]
+	for j in range(len(input[i])):
+		if input[i][j].isalpha():
+			input[i] = input[i].replace(input[i][j], find_key(input[i][j]))
+	count_dic[input[i]] = input.count(input[i])
+input=sorted(list(set(input)))
+for i in input:
+	if count_dic[i] > 1:
+		print(i, count_dic[i])
+	else: print("No dulplicated")
 
-
-print(output)
-print(input)		
 
