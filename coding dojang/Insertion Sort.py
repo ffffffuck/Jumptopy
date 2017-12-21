@@ -1,17 +1,17 @@
-input = [5,2,4,6,1,3]
-
+input = [5,8,2,4,6,1,3,7]
 # input=(''.join(list(map(str,input))))
 
 def sort(input):
     for i in range(1,len(input)):
         if input[i-1] > input[i]:
-            if input.index(input[i]) <= input[i]:
-                input.insert(input.index(input[i+1]), input[i-1])
-                input.remove(input[i-1])
+            if i+1 <= input[i]:
+                input.insert(i+1, input[i-1])
+                input.pop(i-1)
             else:
-                input.insert(input[i], input[i-1])
-                input.reverse()
-                input. remove(input[i-1])
-                input.reverse()
-                print(input)
+                input.insert(input[i]-1, input[i])
+                input.pop(i+1)
+
+
+            print(input)
 sort(input)
+
