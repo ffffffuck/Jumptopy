@@ -1,12 +1,10 @@
-def biggest_prime_factor(n):
-    i = 2
-    while i*i <= n:
-        q,r = divmod(n,i)
-        if r == 0:
-            n = q
-        else:
-            i += 1
-    return print(n)
+def larg(n):
+    i=2
+    while i < n:
+        if n%i == 0:
+            n=n//i
+        i+=1
+    print(n)
 
+larg(3473673465)
 
-biggest_prime_factor(13195)

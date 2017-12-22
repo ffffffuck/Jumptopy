@@ -1,9 +1,7 @@
-
 input = '''
 12.0 12.0 8.0
 15.0 14.0 4.0
 '''
-
 
 def RT(x, y, z):
     n = (x ** 2 - (z / 2) ** 2) ** 0.5
@@ -13,10 +11,7 @@ def RT(x, y, z):
 
 input=input.split('\n')[1:-1]
 for i in range(len(input)):
-    x,y,z= input[i].split(' ')
-    x=float(x)
-    y=float(y)
-    z=float(z)
+    x,y,z= map(float, input[i].split(' '))
     RT(x, y, z)
 
 
