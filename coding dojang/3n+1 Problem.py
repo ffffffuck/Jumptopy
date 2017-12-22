@@ -18,9 +18,9 @@ result=[]
 input=input.split('\n')[1:-1]
 for i in input:
    a=i.split(' ')[0]
-   b=i.split(' ')[-1]
+   b=i.split(' ')[1]
    g=0
-   for n in range(int(a),int(b)+1):
+   for n in range(int(a),int(b)):
        if cycle(n) > g:
            g = cycle(n)
    result.append(str(g))
