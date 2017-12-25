@@ -48,4 +48,4 @@ while True:
             print(' ', end='')
         for i in range(1, 2):
             print('-' * a, end='')
-        print()
+    #     print()
