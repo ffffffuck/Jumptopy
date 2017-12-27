@@ -13,4 +13,3 @@ for cloumn in data[1:]:
 
 for i in countcitizenstatustotal:
     print(i)
-
