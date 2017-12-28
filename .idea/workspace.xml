@@ -2,137 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b11ffa2f-3196-4e0b-8e0a-3c9266328674" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bigdata/엑셀불러오기2.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/Jumptopy.iml" afterPath="$PROJECT_DIR$/.idea/Jumptopy.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bigdata/액셀불러오기5.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/1-100(2).py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/1-100.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/111.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/124.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/coffee.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/dic.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/for.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/hello.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/j-practice-05.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/j-practive-04.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/list1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/list2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/pocket.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/set.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/str1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/str2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.02/tuple.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/1-1000.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/111.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/113.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/113_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/116.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/117.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/117_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/118.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/119.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/119_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/120.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/120_1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/122.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/126.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/126_1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/126_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/128.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/129.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/130.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/131.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/131_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/132.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/134.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/134_1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/136.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/J-practice.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/Multiples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/adsf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/asdf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/j-practice-02.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/plus.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/prac.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/practice-5.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/practice.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/practice_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star-2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star-3.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star2-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star2-2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/star2-3.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.03/사이냅.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/142.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/144.void.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/145-void-return.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/148.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/149.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/150.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/151.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/152.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/155.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/158.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/160.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/163.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-01.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-02.py" afterPath="$PROJECT_DIR$/bigdata/엑셀불러오기.py" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-greet.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-idol.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/prac-sandwich.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/sys1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/sys2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/방명록.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.04/새파일.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/177.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/178.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/181.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/185.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/188_FourCal.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/198_Mr.Paks_house.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/202_paks_house.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/206_house.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/209_divorce.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/234.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/238-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/238.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/239_lamda.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/251.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/264.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/265.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Calculator.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/PythontoC.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/PythontoC_sys.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Restaurant-1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Restaurant-3.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Restaurant-4.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Restaurant-5.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/Sum.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/mod1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/mod1_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/mod2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/prac-01.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/prac-03.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/prac-04.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/prac_02.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/programmer_poll_1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/programmer_poll_2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/sum_sub_muLdev.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/sys2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.05/ㅂㅈㄷㅅ.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/12.15 prac1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/12.15 prac2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/12.15 prac3.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/34235.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/GuGu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/hello" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/memo.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/moss.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/prac-1_compression.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/chapter.06/sub_dir_search.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" afterPath="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,41 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NOT Solved_findmine.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coding dojang/NOT Solved_findmine.py">
+      <file leaf-file-name="엑셀불러오기3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="76">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="간단한 몬테카를로 방법.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py">
+      <file leaf-file-name="액셀불러오기4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="817">
+              <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="엑셀불러오기.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기.py">
+      <file leaf-file-name="액셀불러오기5.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="엑셀불러오기2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -233,9 +95,12 @@
         <option value="$PROJECT_DIR$/coding dojang/Bubble Sort.py" />
         <option value="$PROJECT_DIR$/coding dojang/3n+1 Problem.py" />
         <option value="$PROJECT_DIR$/coding dojang/Largest Prime factor.py" />
-        <option value="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
         <option value="$PROJECT_DIR$/bigdata/엑셀불러오기.py" />
         <option value="$PROJECT_DIR$/bigdata/엑셀불러오기2.py" />
+        <option value="$PROJECT_DIR$/bigdata/엑셀불러오기3.py" />
+        <option value="$PROJECT_DIR$/bigdata/액셀불러오기4.py" />
+        <option value="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
+        <option value="$PROJECT_DIR$/bigdata/액셀불러오기5.py" />
       </list>
     </option>
   </component>
@@ -263,6 +128,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -270,16 +137,24 @@
               <item name="Jumptopy" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Jumptopy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
+              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Jumptopy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
+              <item name="coding dojang" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -298,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.엑셀불러오기2">
+  <component name="RunManager" selected="Python.액셀불러오기5">
     <configuration name="간단한 몬테카를로 방법" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -312,24 +187,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="엑셀불러오기" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/엑셀불러오기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,56 +210,74 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Largest Prime factor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="엑셀불러오기3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coding dojang" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coding dojang/Largest Prime factor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/엑셀불러오기3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="NOT Solved_findmine" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="액셀불러오기4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/coding dojang" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coding dojang/NOT Solved_findmine.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/액셀불러오기4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="액셀불러오기5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Jumptopy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/액셀불러오기5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Largest Prime factor" />
-      <item index="1" class="java.lang.String" itemvalue="Python.NOT Solved_findmine" />
-      <item index="2" class="java.lang.String" itemvalue="Python.간단한 몬테카를로 방법" />
-      <item index="3" class="java.lang.String" itemvalue="Python.엑셀불러오기" />
-      <item index="4" class="java.lang.String" itemvalue="Python.엑셀불러오기2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.간단한 몬테카를로 방법" />
+      <item index="1" class="java.lang.String" itemvalue="Python.엑셀불러오기2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.엑셀불러오기3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.액셀불러오기4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.액셀불러오기5" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.엑셀불러오기2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.엑셀불러오기" />
+        <item index="0" class="java.lang.String" itemvalue="Python.액셀불러오기5" />
+        <item index="1" class="java.lang.String" itemvalue="Python.액셀불러오기4" />
         <item index="2" class="java.lang.String" itemvalue="Python.간단한 몬테카를로 방법" />
-        <item index="3" class="java.lang.String" itemvalue="Python.NOT Solved_findmine" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Largest Prime factor" />
+        <item index="3" class="java.lang.String" itemvalue="Python.엑셀불러오기3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.엑셀불러오기2" />
       </list>
     </recent_temporary>
   </component>
@@ -476,20 +351,34 @@
       <option name="project" value="LOCAL" />
       <updated>1513931273108</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="aaaa">
+      <created>1514339021797</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514339021797</updated>
+    </task>
+    <task id="LOCAL-00010" summary="aaaa">
+      <created>1514362650169</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1514362650169</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21383148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21383148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.15580286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.48410174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298731" sideWeight="0.84419715" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39446366" sideWeight="0.8783784" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -532,14 +421,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="52" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/coding dojang/CIJEOCIJEO.py" />
-    <entry file="file://$PROJECT_DIR$/coding dojang/AtoZ.py" />
-    <entry file="file://$PROJECT_DIR$/coding dojang/dfasd.py" />
     <entry file="file://$PROJECT_DIR$/coding dojang/Multiples.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -846,16 +732,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/coding dojang/NOT Solved_findmine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="0">
           <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="95">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -868,10 +753,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기2.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/엑셀불러오기3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="76">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
           <folding />
         </state>
       </provider>
