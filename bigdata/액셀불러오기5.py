@@ -87,6 +87,7 @@ while True:
         print_row(get_csv_rowInstance(a),b)
         print()
         print("총합은:(sum(a))","%g" %my_sum(get_csv_rowInstance(a)))
+
     elif input1 =='2':
         a=input("Header Cloumn을 입력하세요:")
         b = type_check(get_csv_rowInstance(a))
@@ -94,6 +95,7 @@ while True:
         print_row(get_csv_rowInstance(a),b)
         print()
         print("평균은:(sum(a)/len(a))","%g"%my_avg(get_csv_rowInstance(a)))
+
     elif input1 =='3':
         a = input("Header Cloumn을 입력하세요:")
         b = type_check(get_csv_rowInstance(a))
@@ -101,6 +103,7 @@ while True:
         print_row(get_csv_rowInstance(a),b)
         print()
         print("최대값은:(max(a))","%g"%my_max(get_csv_rowInstance(a)))
+
     elif input1 == '4':
         a = input("Header Cloumn을 입력하세요:")
         b = type_check(get_csv_rowInstance(a))
@@ -108,12 +111,14 @@ while True:
         print_row(get_csv_rowInstance(a),b)
         print()
         print("최소값은:(min(a))","%g"%my_min(get_csv_rowInstance(a)))
+
     elif input1 == '5':
         a = input("Header Cloumn을 입력하세요:")
         b = type_check(get_csv_rowInstance(a))
         print("요소와 편차는(표본-평균):")
         print_row2(get_csv_rowInstance(a),my_dev(get_csv_rowInstance(a)),b)
         print()
+
     elif input1 =='6':
         a= input("Header Cloumn을 입력하세요")
         b = type_check(get_csv_rowInstance(a))
@@ -123,6 +128,7 @@ while True:
         print("표준편차는:(√분산)")
         print("%0.2f" %my_stdev(get_csv_rowInstance(a)))
         print()
+
     elif input1 =='7':
         a= input("Header Cloumn을 입력하세요")
         b = type_check(get_csv_rowInstance(a))
@@ -131,6 +137,7 @@ while True:
         print()
         print("분산은:(∑(표본-평균)**/표본수)")
         print("%g" %my_vari(get_csv_rowInstance(a)))
+
     elif input1 =='8':
         a = input("Header Cloumn을 입력하세요")
         b = type_check(get_csv_rowInstance(a))
@@ -141,12 +148,15 @@ while True:
         elif c =='2':
             print_row(sorted(map(float, get_csv_rowInstance(a))),b)
             print()
+
     elif input1 =='9':
         a = input("Access키를 입력하세요:")
         print_row(get_csv_rowInstance(a),'str')
+
     elif input1 == '10':
         primary_key = input("Primary Key를 입력하세요:")
         print_colInstance(get_csv_colInstance(primary_key))
+
     elif input1 == '11':
         print("프로그램을 종료합니다.")
         break
