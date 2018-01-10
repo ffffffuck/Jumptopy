@@ -9,7 +9,6 @@ def find_Header(x):
 
 def primary_key(x):
     key_list=find_Header("JURISDICTION NAME")
-    key_file=[]
     a= key_list.index(x)
     return data[a+1]
 
@@ -30,7 +29,7 @@ def my_min(x):
 
 def my_dev(x):
     for i in x:
-        print(i,'\t\t',"%g"%(float(i)-my_avg(x)))
+        print("%0.2f"%float(i),'\t\t',"%g"%(float(i)-my_avg(x)))
 
 def my_vari(x):
     vari_sum=0
@@ -48,10 +47,10 @@ def re_array(x):
     return reversed(sorted(map(float,x)))
 
 def print_list(x):
-    try:list(map(int,x))
-    except:list(map(float,x))
+
     for i in x:
-        print(i,end=' ')
+        if type(i) == int:
+            print(int(i),end=' ')
 
 
 with open("Demographic_Statistics_By_Zip_Code.csv") as infile:

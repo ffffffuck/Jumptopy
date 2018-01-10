@@ -19,24 +19,22 @@ for element in root.findall('item'):
 
 nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
 
+
 try:os.mkdir('C:\VI_Bigdata')
 except:pass
 
-
-
-
+record_limit=3
 try:
     with open("순서.txt",'r') as infile:
         lines = list(infile)
     line = lines[-1:]
-
     for i in line:
-        if i%3 ==0:
-            try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]')
+        if (int(i)-1)%record_limit ==0:
+            try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
             except:pass
-            nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(int(i) + 1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-            with open("순서.txt", 'a+') as infile:
-                infile.write(str(int(i)+ 1)+'\n')
+        nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
+        with open("순서.txt", 'a') as infile:
+            infile.write(str(int(i)+ 1)+'\n')
 except:
     with open("순서.txt", 'w') as infile:
         infile.write(str(1)+'\n')
@@ -44,8 +42,12 @@ except:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
-        nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-
+        if (int(i)-1)%record_limit ==0:
+            try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
+            except:pass
+        nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
+        with open("순서.txt", 'a') as infile:
+            infile.write(str(int(i)+ 1)+'\n')
 
 
 print("End")

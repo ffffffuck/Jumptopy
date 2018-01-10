@@ -14,8 +14,6 @@ def print_row(row_instance, type='int'):
             print(int(i),end=' ')
         elif type == 'float':
             print("%g" % float(i),end=' ')
-        elif type == 'str':
-            print(str(i),end=' ')
 
 def print_row2(row_instance, row_instance2, type='int'):
     for i in range(len(row_instance)):
@@ -48,10 +46,7 @@ def my_sum(data):
     return float(result)
 
 def my_avg(data):
-    result = 0
-    for i in data:
-        result+=float(i)
-    return result/len(data)
+    return my_sum(data)/len(data)
 
 def my_max(data):
     return max(list(map(float,data)))
@@ -75,7 +70,7 @@ def my_stdev(data):
     return pow(my_vari(data),0.5)
 
 
-with open("C:\\Users\\user\\Desktop\\Demographic_Statistics_By_Zip_Code.csv",newline='') as infile:
+with open("Demographic_Statistics_By_Zip_Code.csv",newline='') as infile:
     data=list(csv.reader(infile))
 
 while True:
