@@ -52,3 +52,5 @@ except:
         nene_table[1101:].to_csv(('C:\VI_Bigdata/Nene_data[%d]/'%int(i)) +'nene[' + str(1101) + '-'+']' + '.csv', encoding="cp949", mode='w', index=True)
         with open("index3.txt", 'a') as infile:
             infile.write(str(int(i)+ 1)+'\n')
+
+print("End")

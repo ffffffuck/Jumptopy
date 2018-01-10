@@ -43,25 +43,4 @@ except:
         nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
 
 
-
-
-
-
-
-
-
-
-
-
-
-# try:os.mkdir('C:\VI_Bigdata')
-# except:pass
-# nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
-# dir_list = glob.glob('C:\VI_Bigdata/nene*')
-# nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(1) + ']' + '.csv', encoding="cp949", mode='w', index=True)
-# nene0 = dir_list[-1:]
-# for nene in nene0:
-#     number = nene[nene.index('[')+1:nene.index(']')]
-#     nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(int(number)+1) + ']' + '.csv', encoding="cp949", mode='w', index=True)
-#
 print("End")
