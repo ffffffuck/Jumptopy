@@ -27,7 +27,7 @@ except:pass
 
 record_limit=3
 try:
-    with open("날짜.txt", 'r') as infile:
+    with open("date.txt", 'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     pre_line = lines[-2:-1]
@@ -38,12 +38,12 @@ try:
     if int(s_time) != int(pre_time):
         os.mkdir('C:\VI_Bigdata/Nene_%s_Data' % s_time)
     nene_table.to_csv(('C:\VI_Bigdata/Nene_%s_Data/' % s_time) + 'nene_' + time.strftime('%Y-%m-%d %H_%M_%S',time.localtime(time.time())) + '.csv',encoding="cp949", mode='w', index=True)
-    with open("날짜.txt", 'a') as infile:
+    with open("date.txt", 'a') as infile:
         infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))) + '\n')
 except:
-    with open("날짜.txt", 'w') as infile:
+    with open("date.txt", 'w') as infile:
         infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time())))+'\n')
-    with open("날짜.txt", 'r') as infile:
+    with open("date.txt", 'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
@@ -51,7 +51,7 @@ except:
         try:os.mkdir('C:\VI_Bigdata/Nene_%s_Data' %s_time)
         except:pass
     nene_table.to_csv(('C:\VI_Bigdata/Nene_%s_Data/' %s_time) + 'nene_' + time.strftime('%Y-%m-%d %H_%M_%S',time.localtime(time.time())) + '.csv',encoding="cp949", mode='w', index=True)
-    with open("날짜.txt", 'a') as infile:
+    with open("date.txt", 'a') as infile:
         infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))) + '\n')
 
 

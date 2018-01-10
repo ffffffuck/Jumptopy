@@ -25,7 +25,7 @@ except:pass
 
 record_limit=3
 try:
-    with open("순서.txt",'r') as infile:
+    with open("index2.txt",'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
@@ -33,12 +33,12 @@ try:
             try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
             except:pass
         nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("순서.txt", 'a') as infile:
+        with open("index2.txt", 'a') as infile:
             infile.write(str(int(i)+ 1)+'\n')
 except:
-    with open("순서.txt", 'w') as infile:
+    with open("index2.txt", 'w') as infile:
         infile.write(str(1)+'\n')
-    with open("순서.txt", 'r') as infile:
+    with open("index2.txt", 'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
@@ -46,7 +46,7 @@ except:
             try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
             except:pass
         nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("순서.txt", 'a') as infile:
+        with open("index2.txt", 'a') as infile:
             infile.write(str(int(i)+ 1)+'\n')
 
 

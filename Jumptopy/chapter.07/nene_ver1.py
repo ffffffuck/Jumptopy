@@ -1,6 +1,7 @@
 import urllib.request
 from pandas import DataFrame
 import os
+
 result = []
 
 import xml.etree.ElementTree as ET
@@ -22,21 +23,19 @@ nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
 try:os.mkdir('C:\VI_Bigdata')
 except:pass
 
-
-
 try:
-    with open("순서.txt",'r') as infile:
+    with open("index.txt",'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
         n = i[:-2]
         nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(int(i) + 1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("순서.txt", 'a+') as infile:
+        with open("index.txt", 'a+') as infile:
             infile.write(str(int(i)+ 1)+'\n')
 except:
-    with open("순서.txt", 'w') as infile:
+    with open("index.txt", 'w') as infile:
         infile.write(str(1)+'\n')
-    with open("순서.txt", 'r') as infile:
+    with open("index.txt", 'r') as infile:
         lines = list(infile)
     line = lines[-1:]
     for i in line:
