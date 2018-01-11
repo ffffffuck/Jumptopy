@@ -7,12 +7,13 @@ result = []
 index='index'
 for page_idx in range(1,max_page+1):
     Cheogajip_URL='http://www.cheogajip.co.kr/establish02_02.html?page=%s&search=&keyword='%str(page_idx)
-    print(Cheogajip_URL)
+    # print(Cheogajip_URL)
 
     response = urllib.request.urlopen(Cheogajip_URL)
     soupData = BeautifulSoup(response.read().decode('CP949'),'html.parser')
 
     store_trs = soupData.find_all('tr',attrs={'align':'center','bgcolor':'#FFFFFF'})
+    print(store_trs)
     print("End")
     if (store_trs):
         for store_tr in store_trs:
@@ -25,5 +26,5 @@ for page_idx in range(1,max_page+1):
                 result.append([store_name]+[store_address]+[phone_number])
                 #result.append(store_name+','+store_address+','+phone_number)
 
-cheogajip_table = DataFrame(result,columns=('store_name','store_address','phone_number'))
-cheogajip_table.to_csv("cheogajip.csv",encoding='cp949',mode='w',index=True)
+# cheogajip_table = DataFrame(result,columns=('store_name','store_address','phone_number'))
+# cheogajip_table.to_csv("cheogajip.csv",encoding='cp949',mode='w',index=True)
