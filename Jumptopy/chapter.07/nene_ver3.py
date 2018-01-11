@@ -22,37 +22,13 @@ for element in root.findall('item'):
 nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
 
 
-try:os.mkdir('C:\VI_Bigdata')
+try:os.mkdir('C:\V3_Bigdata')
 except:pass
 
-record_limit=3
-try:
-    with open("date.txt", 'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    pre_line = lines[-2:-1]
-    for i in line:
-        s_time = i[14:16] #분단위
-    for j in pre_line:
-        pre_time = j[14:16]
-    if int(s_time) != int(pre_time):
-        os.mkdir('C:\VI_Bigdata/Nene_%s_Data' % s_time)
-    nene_table.to_csv(('C:\VI_Bigdata/Nene_%s_Data/' % s_time) + 'nene_' + time.strftime('%Y-%m-%d %H_%M_%S',time.localtime(time.time())) + '.csv',encoding="cp949", mode='w', index=True)
-    with open("date.txt", 'a') as infile:
-        infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))) + '\n')
-except:
-    with open("date.txt", 'w') as infile:
-        infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time())))+'\n')
-    with open("date.txt", 'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    for i in line:
-        s_time=i[14:16]
-        try:os.mkdir('C:\VI_Bigdata/Nene_%s_Data' %s_time)
-        except:pass
-    nene_table.to_csv(('C:\VI_Bigdata/Nene_%s_Data/' %s_time) + 'nene_' + time.strftime('%Y-%m-%d %H_%M_%S',time.localtime(time.time())) + '.csv',encoding="cp949", mode='w', index=True)
-    with open("date.txt", 'a') as infile:
-        infile.write(str(time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))) + '\n')
-
+line = time.strftime('%Y-%m-%d %H_%M_%S', time.localtime(time.time()))
+s_time=line[14:16] #분단위
+try:os.mkdir('C:\V3_Bigdata/Nene_%s_Data' %s_time)
+except:pass
+nene_table.to_csv(('C:\V3_Bigdata/Nene_%s_Data/' %s_time)+'nene_'+line+'.csv',encoding="cp949", mode='w', index=True)
 
 print("End")

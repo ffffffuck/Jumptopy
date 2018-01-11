@@ -20,27 +20,20 @@ for element in root.findall('item'):
 
 nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
 
-try:os.mkdir('C:\VI_Bigdata')
+try:os.mkdir('C:\V1_Bigdata')
 except:pass
 
 try:
     with open("index.txt",'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    for i in line:
-        n = i[:-2]
-        nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(int(i) + 1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("index.txt", 'a+') as infile:
-            infile.write(str(int(i)+ 1)+'\n')
+        line = infile.readline()
 except:
     with open("index.txt", 'w') as infile:
-        infile.write(str(1)+'\n')
-    with open("index.txt", 'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    for i in line:
-        n = i[:-2]
-        nene_table.to_csv('C:\VI_Bigdata/nene' + '[' + str(1) + ']' + '.csv', encoding="cp949", mode='w',index=True)
+        infile.write(str(1))
+    with open("index.txt",'r') as infile:
+        line = infile.readline()
 
+nene_table.to_csv('C:\V1_Bigdata/nene'+'['+str(int(line))+']'+'.csv',encoding="cp949", mode='w',index=True)
+with open("index.txt", 'w') as infile:
+        infile.write(str(int(line)+ 1))
 
 print("End")

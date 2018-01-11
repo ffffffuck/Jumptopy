@@ -1,6 +1,7 @@
 import urllib.request
 from pandas import DataFrame
 import os
+
 result = []
 
 import xml.etree.ElementTree as ET
@@ -20,34 +21,25 @@ for element in root.findall('item'):
 nene_table = DataFrame(result,columns=('store','sido','gungu','store_address'))
 
 
-try:os.mkdir('C:\VI_Bigdata')
+try:os.mkdir('C:\V2_Bigdata')
 except:pass
 
 record_limit=3
 try:
     with open("index2.txt",'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    for i in line:
-        if (int(i)-1)%record_limit ==0:
-            try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
-            except:pass
-        nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("index2.txt", 'a') as infile:
-            infile.write(str(int(i)+ 1)+'\n')
+        line = infile.readline()
 except:
     with open("index2.txt", 'w') as infile:
-        infile.write(str(1)+'\n')
+        infile.write(str(1))
     with open("index2.txt", 'r') as infile:
-        lines = list(infile)
-    line = lines[-1:]
-    for i in line:
-        if (int(i)-1)%record_limit ==0:
-            try:os.mkdir('C:\VI_Bigdata/Nene_Data[%d]' % (int(((int(i)-1)/record_limit)+1)))
-            except:pass
-        nene_table.to_csv(('C:\VI_Bigdata/Nene_Data[%d]/nene'%int(((int(i)-1)/record_limit)+1))  + '[' + str(int(i)) + ']' + '.csv', encoding="cp949", mode='w',index=True)
-        with open("index2.txt", 'a') as infile:
-            infile.write(str(int(i)+ 1)+'\n')
+        line = infile.readline()
+
+if (int(line)-1)%record_limit ==0:
+    try:os.mkdir('C:\V2_Bigdata/Nene_Data[%d]' % (int(((int(line)-1)/record_limit)+1)))
+    except:pass
+nene_table.to_csv(('C:\V2_Bigdata/Nene_Data[%d]/nene'%int(((int(line)-1)/record_limit)+1))+'['+str(int(line)) + ']'+'.csv',encoding="cp949", mode='w',index=True)
+with open("index2.txt", 'w') as infile:
+    infile.write(str(int(line)+ 1))
 
 
 print("End")

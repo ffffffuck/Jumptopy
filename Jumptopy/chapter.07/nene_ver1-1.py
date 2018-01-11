@@ -25,14 +25,14 @@ for element in root.findall('item'):
 nene_table = DataFrame(result, columns=('store', 'sido', 'gungu', 'store_address'))
 
 
-try:os.mkdir('C:\VI_Bigdata')
+try:os.mkdir('C:\V1_Bigdata')
 except:pass
-dir_list = glob.glob('C:\VI_Bigdata/nene*')
+dir_list = glob.glob('C:\V1_Bigdata/nene*')
 if len(dir_list) > 1:pass
-else:nene_table.to_csv('C:\VI_Bigdata/nene'+'['+str(1)+']'+'.csv',encoding="cp949",mode='w',index=True)
+else:nene_table.to_csv('C:\V1_Bigdata/nene'+'['+str(1)+']'+'.csv',encoding="cp949",mode='w',index=True)
 nene0 = dir_list[-1:]
 for nene in nene0:
     number = nene[nene.index('[')+1:nene.index(']')]
-    nene_table.to_csv('C:\VI_Bigdata/nene'+'['+str(int(number)+1)+']'+'.csv',encoding="cp949",mode='w',index=True)
+    nene_table.to_csv('C:\V1_Bigdata/nene'+'['+str(int(number)+1)+']'+'.csv',encoding="cp949",mode='w',index=True)
 
 print("End")
