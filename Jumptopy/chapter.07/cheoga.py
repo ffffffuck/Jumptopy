@@ -26,5 +26,5 @@ for page_idx in range(1,max_page+1):
                 result.append([store_name]+[store_address]+[phone_number])
                 #result.append(store_name+','+store_address+','+phone_number)
 
-# cheogajip_table = DataFrame(result,columns=('store_name','store_address','phone_number'))
-# cheogajip_table.to_csv("cheogajip.csv",encoding='cp949',mode='w',index=True)
+cheogajip_table = DataFrame(result,columns=('store_name','store_address','phone_number'))
+cheogajip_table.to_csv("cheogajip.csv",encoding='cp949',mode='w',index=True)

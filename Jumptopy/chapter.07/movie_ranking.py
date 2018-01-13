@@ -23,5 +23,6 @@ for change in changes:
 for i in range(len(tags)):
     result.append([i+1]+[tags1[i]]+[change1[i]])
 
-movie_table = DataFrame(result,columns=('순위','영화명','변동폭'))
-movie_table.to_csv("Movie_Rank.csv",encoding='cp949',mode='w',index=False)
+print(result)
+# movie_table = DataFrame(result,columns=('순위','영화명','변동폭'))
+# movie_table.to_csv("Movie_Rank.csv",encoding='cp949',mode='w',index=False)
