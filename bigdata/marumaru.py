@@ -5,10 +5,19 @@ from selenium import webdriver
 from multiprocessing import Pool
 import os
 
-def download(url, file_name):
+def download(url, file_name): #파일 저장 함수
     with open(file_name, "wb") as file:
         response = get(url)
         file.write(response.content)
+
+def rep(a): #파일 이름 특수문자 처리
+    rep=""
+    for c in a:
+        if c.isalnum():
+            rep+=c
+    return rep
+
+
 
 path ='C:\\Users\\lee\Downloads\\chromedriver'
 
@@ -49,9 +58,9 @@ def get_image():
     for i in thumnail:
         try:os.mkdir('마루마루')
         except:pass
-        try:os.mkdir('마루마루/%s'%a)
+        try:os.mkdir('마루마루/%s'%rep(a))
         except:pass
-        download(list(i.img.attrs.values())[0],'마루마루/%s/%s.jpg'%(a,a))
+        download(list(i.img.attrs.values())[0],'마루마루/%s/%s.gif'%(rep(a),rep(a)))
         aa = i.find_all("a",attrs={"target":"_blank"})
         for j in aa:
             comic_URL=list(j.attrs.values())[1]
@@ -66,10 +75,10 @@ def get_image():
             comic_content = soup3.find_all('div', attrs={'id': 'gallery_vertical'})
             count=0
             for comic in comic_content[0]:
-                try:os.mkdir('마루마루/%s/%s' % (a, comic_name))
+                try:os.mkdir('마루마루/%s/%s' % (rep(a), rep(comic_name)))
                 except:pass
                 co = 'http://wasabisyrup.com' + list(comic.attrs.values())[1]
-                download(co,'마루마루/%s/%s/%s.jpg'%(a, comic_name,count))
+                download(co,'마루마루/%s/%s/%s.jpg'%(rep(a), rep(comic_name),count))
                 count+=1
 
 
