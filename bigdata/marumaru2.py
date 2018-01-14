@@ -1,21 +1,14 @@
 import requests
 from requests import get
 from bs4 import BeautifulSoup
-from selenium import webdriver
 from multiprocessing import Pool
+import mechanicalsoup
 import os
 
 def download(url, file_name):
     with open(file_name, "wb") as file:
         response = get(url)
         file.write(response.content)
-
-path ='C:\\Users\\lee\Downloads\\chromedriver'
-
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-options.add_argument('window-size=1920x1080')
-options.add_argument("disable-gpu")
 
 hdr1 ={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)'}
 hdr2 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win32; x32)'}
@@ -45,30 +38,25 @@ def get_image():
     soup2 = BeautifulSoup(html2, 'lxml')
 
     thumnail = soup2.find_all("div",attrs={'id':'vContent'})
-
     for i in thumnail:
         try:os.mkdir('마루마루')
         except:pass
         try:os.mkdir('마루마루/%s'%a)
         except:pass
-        download(list(i.img.attrs.values())[0],'마루마루/%s/%s.jpg'%(a,a))
+        download(list(i.img.attrs.values())[0],'마루마루/%s/%s.gif'%(a,a))
+
         aa = i.find_all("a",attrs={"target":"_blank"})
         for j in aa:
             comic_URL=list(j.attrs.values())[1]
             comic_name=list(j.strings)[0]
+            page = mechanicalsoup.Browser().get(comic_URL)
 
-            driver = webdriver.Chrome(path, chrome_options=options)
-            driver.get(comic_URL)
-            driver.implicitly_wait(3)
-            html3 = driver.page_source
-            soup3 = BeautifulSoup(html3, 'lxml')
-
-            comic_content = soup3.find_all('div', attrs={'id': 'gallery_vertical'})
-            count=0
-            for comic in comic_content[0]:
+            count = 0
+            comic_content = page.soup.find_all('img', attrs={"class": "lz-lazyload"})
+            for i in comic_content:
                 try:os.mkdir('마루마루/%s/%s' % (a, comic_name))
                 except:pass
-                co = 'http://wasabisyrup.com' + list(comic.attrs.values())[1]
+                co = 'http://wasabisyrup.com' + list(i.attrs.values())[2]
                 download(co,'마루마루/%s/%s/%s.jpg'%(a, comic_name,count))
                 count+=1
 
