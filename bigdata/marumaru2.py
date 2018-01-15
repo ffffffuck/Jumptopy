@@ -1,9 +1,10 @@
 import requests
 from requests import get
 from bs4 import BeautifulSoup
-from multiprocessing import Pool #숨어있는 javascript 소스 처리
-import mechanicalsoup
+import mechanicalsoup           #숨어있는 javascript 소스 처리
 import os
+# from multiprocessing import Pool
+
 
 def rep(a):       #파일 이름 특수문자 처리
     rep=""
@@ -23,9 +24,17 @@ hdr3 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64)'}
 hdr = 0
 
 def get_image(): #첫페이지 파싱
-    sub=[]
-    links=[]
+    comic_URL1=[]
+    comic_URL2=[]
+    comic_name1=[]
+    comic_name2=[]
+
     a = input("제목을 입력하세요")
+    sel = input("1:전부받기 2:골라받기 3:이어받기")
+
+    if sel =='1':
+        print("전체를 다운로드 중입니다...")
+    else : print("목록을 불러오는 중입니다..")
 
     URL='http://marumaru.in/c/1'
     html = requests.get(URL,headers=hdr1).text
@@ -35,13 +44,14 @@ def get_image(): #첫페이지 파싱
     try:
         for i in link:
             if list(i.a.attrs)[0] =='cid':
-                links.append(list(i.a.attrs.values())[1])
-                sub.append(list(i.div.strings)[0])
+                    if a == list(i.div.strings)[0]:
+                        links = list(i.a.attrs.values())[1]
+                        sub = list(i.div.strings)[0]
+                        print(links)
+                        print(sub)
     except:pass
-
-    b = sub.index(a)
-    URL2 ='http://marumaru.in/'+links[b]        #링크들어가서 2번째 페이지 파싱
-    html2 = requests.get(URL2,headers=hdr2).text
+    URL2 ='http://marumaru.in/'+links       #링크들어가서 2번째 페이지 파싱
+    html2 = requests.get(URL2,headers=hdr3).text
     soup2 = BeautifulSoup(html2, 'lxml')
 
     thumnail = soup2.find_all("div",attrs={'id':'vContent'})
@@ -54,21 +64,42 @@ def get_image(): #첫페이지 파싱
 
         aa = i.find_all("a",attrs={"target":"_blank"})      #링크들어가서 이미지 긁어오기
         for j in aa:
-            comic_URL=list(j.attrs.values())[1]
-            comic_name=list(j.strings)[0]      #해당 화수
+            comic_URL1.append(list(j.attrs.values())[1])
+            comic_name1.append(list(j.strings)[0])
 
-            count = 0
-            page = mechanicalsoup.Browser().get(comic_URL)
-            comic_content = page.soup.find_all('img', attrs={"class": "lz-lazyload"})
-            for i in comic_content:
-                try:os.mkdir('마루마루/%s/%s' % (rep(a), rep(comic_name)))
-                except:pass
-                co = 'http://wasabisyrup.com' + list(i.attrs.values())[2]
-                download(co,'마루마루/%s/%s/%s.jpg'%(rep(a), rep(comic_name),count))
-                count+=1
+    if sel =='1':
+        for i in range(len(comic_name1)):
+            comic_URL2 = comic_URL1
+            comic_name2 = comic_name1
+
+    elif sel =='2':
+        for i in range(len(comic_name1)):
+            print(str(i+1)+":"+comic_name1[i])
+        sel1 =input("원하시는 화를 선택하세요")
+        print("다운로드 중입니다...")
+        comic_URL2.append(comic_URL1[int(sel1)-1])
+        comic_name2.append(comic_name1[int(sel1)-1])
 
 
-if __name__=='__main__':
-    pool = Pool(processes=4)  # 4개의 프로세스를 사용합니다.
-    pool.map(get_image())
+    elif sel =='3':
+        for i in range(len(comic_name1)):
+            print(str(i+1)+":"+comic_name1[i])
+        sel1 =input("몇화부터 이어받을지 선택하세요")
+        print("다운로드 중입니다...")
+        comic_URL2.append(comic_URL1[int(sel1)-1:])
+        comic_name2.append(comic_name1[int(sel1)-1:])
 
+    for i in range(len(comic_URL2)):   #이미지 긁어오기
+        count = 0
+        page = mechanicalsoup.Browser().get(comic_URL2[0])
+        comic_content = page.soup.find_all('img', attrs={"class": "lz-lazyload"})
+        for j in comic_content:
+            try:os.mkdir('마루마루/%s/%s' % (rep(a),rep(comic_name2[i])))
+            except:pass
+            co = 'http://wasabisyrup.com' + list(j.attrs.values())[2]
+            download(co, '마루마루/%s/%s/%s.jpg' % (rep(a), rep(comic_name2[i]), count))
+            count += 1
+
+
+get_image()
+print("다운로드 끝")
