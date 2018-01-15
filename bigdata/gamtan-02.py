@@ -1,7 +1,7 @@
 import csv
 from pandas import DataFrame
 
-with open("gamtan.csv",newline='')as infile:
+with open("gamtan_수집데이터.csv",newline='')as infile:
     gamtan_list =list(csv.reader(infile))[1:]
 
 result = []
@@ -39,16 +39,26 @@ for i in result2:
     for j in result:
         if str(i) in j:
             result3.append(j)
-print(' -------------------- ')
-
+print(' ------------------------------ ')
+print('|     지역     |지점수|    비율   |')
+print(' ------------------------------ ')
 for i in result3:
     # print(int(len(i[0])))
-    space = ' '*((8-len(i[0])))
-    print('|'+i[0]+space+'|'+i[1]+'|'+i[2]+'|')
+    if len(i[0]) ==3:
+        space = '      '
+    elif len(i[0]) ==5:
+         space = '   '
+    elif len(i[0]) == 4:
+        space = '    '
+    elif len(i[0]) == 7:
+        space = ''
+    # if len(i[1]) == 2:
+    #     space2 = ' '
+    print('| '+i[0]+space+' | '+i[1]+' | '+i[2]+' |')
+    print(' ---------------------------- ')
 
 
-
-gamtan_table = DataFrame(result3, columns=("지역", "지점수", "비율"))
-gamtan_table.to_csv("gamtan_가공정보.csv", encoding='cp949', mode='w', index=False)
+# gamtan_table = DataFrame(result3, columns=("지역", "지점수", "비율"))
+# gamtan_table.to_csv("gamtan_가공정보.csv", encoding='cp949', mode='w', index=False)
 
 

@@ -22,14 +22,14 @@ for i in range(1,maxpage+1):
 
         result.append([location]+[jumpo]+[adress])
 
+for i in result:
+    print('| ' + i[0]  + ' | ' + i[1] + ' | ' + i[2] + ' |')
 
 
-gamtan_table = DataFrame(result,columns=("지역","가맹점명","주소"))
-gamtan_table.to_csv("gamtan_수집데이터.csv",encoding='cp949',mode='w',index=False)
+# gamtan_table = DataFrame(result,columns=("지역","가맹점명","주소"))
+# gamtan_table.to_csv("gamtan_수집데이터.csv",encoding='cp949',mode='w',index=False)
 
 
-with open("gamtan.csv",newline='')as infile:
-    gamtan_list =list(csv.reader(infile))[1:]
 
 
 
