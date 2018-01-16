@@ -2,10 +2,16 @@ import requests
 import csv
 from bs4 import BeautifulSoup
 from pandas import DataFrame
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+
 
 hdr1 ={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)'}
 
 result =[]
+result1 = []
 maxpage = 28
 
 for i in range(1,maxpage+1):
@@ -21,15 +27,13 @@ for i in range(1,maxpage+1):
         adress = list(i.strings)[5]
 
         result.append([location]+[jumpo]+[adress])
-
-for i in result:
-    print('| ' + i[0]  + ' | ' + i[1] + ' | ' + i[2] + ' |')
-
-
-# gamtan_table = DataFrame(result,columns=("지역","가맹점명","주소"))
-# gamtan_table.to_csv("gamtan_수집데이터.csv",encoding='cp949',mode='w',index=False)
+        result1.append(location+jumpo+adress)
 
 
 
+ae = pd.DataFrame(result1,np.random.randn(407,3),columns=("지역","지점수","비율"))
+gamtan_table = DataFrame(result, columns=("지역", "지점수", "비율"))
+gamtan_table.to_csv("gamtan_수집데이터.csv", encoding='cp949', mode='w', index=False)
 
-
+http://ourcstory.tistory.com/145
+print(ae)
