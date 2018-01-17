@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b11ffa2f-3196-4e0b-8e0a-3c9266328674" name="Default" comment="aaaa">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py" />
       <change beforePath="$PROJECT_DIR$/.idea/Jumptopy.iml" afterPath="$PROJECT_DIR$/.idea/Jumptopy.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -17,67 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nene_ver1-1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver1-1.py">
+      <file leaf-file-name="marumaru2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bigdata/marumaru2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cheoga.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/cheoga.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="8" column="98" lean-forward="false" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="기본코드_for__nene치킨시험문제.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/기본코드_for__nene치킨시험문제.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="movie_ranking.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/movie_ranking.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html crolling.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/html crolling.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asdf.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,33 +42,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/coding dojang/Josephus Problem.py" />
-        <option value="$PROJECT_DIR$/coding dojang/Bubble Sort.py" />
-        <option value="$PROJECT_DIR$/coding dojang/3n+1 Problem.py" />
-        <option value="$PROJECT_DIR$/coding dojang/Largest Prime factor.py" />
-        <option value="$PROJECT_DIR$/bigdata/엑셀불러오기.py" />
-        <option value="$PROJECT_DIR$/bigdata/엑셀불러오기2.py" />
-        <option value="$PROJECT_DIR$/bigdata/엑셀불러오기3.py" />
-        <option value="$PROJECT_DIR$/bigdata/액셀불러오기4.py" />
-        <option value="$PROJECT_DIR$/coding dojang/간단한 몬테카를로 방법.py" />
-        <option value="$PROJECT_DIR$/coding dojang/상품 is 뭔들.py" />
-        <option value="$PROJECT_DIR$/coding dojang/120번쨰 죄수.py" />
-        <option value="$PROJECT_DIR$/bigdata/액셀불러오기5.py" />
-        <option value="$PROJECT_DIR$/bigdata/액셀6.py" />
-        <option value="$PROJECT_DIR$/bigdata/adsf.py" />
-        <option value="$PROJECT_DIR$/coding dojang/가장 큰수 만들기.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.05/188_FourCal.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/327.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/328.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/330.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/331.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/335 prac.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene2.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/순서.txt" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/ertret.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver1-1.py" />
-        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver3.py" />
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver1.py" />
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver2.py" />
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver4.py" />
@@ -150,14 +66,40 @@
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/mm.py" />
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/movie_ranking.py" />
         <option value="$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py" />
+        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/dfgdg.py" />
+        <option value="$PROJECT_DIR$/Jumptopy/chapter.07/dojang crolling.py" />
+        <option value="$PROJECT_DIR$/bigdata/movie_ranking.py" />
+        <option value="$PROJECT_DIR$/bigdata/Melon_Rank.py" />
+        <option value="$PROJECT_DIR$/bigdata/네이버랭킹.py" />
+        <option value="$PROJECT_DIR$/bigdata/dojang crolling.py" />
+        <option value="$PROJECT_DIR$/bigdata/sdf.py" />
+        <option value="$PROJECT_DIR$/bigdata/daf.py" />
+        <option value="$PROJECT_DIR$/bigdata/image crolling.py" />
+        <option value="$PROJECT_DIR$/bigdata/adfadf.py" />
+        <option value="$PROJECT_DIR$/bigdata/imagecrolling.py" />
+        <option value="$PROJECT_DIR$/bigdata/zxcv.py" />
+        <option value="$PROJECT_DIR$/bigdata/dddd.py" />
+        <option value="$PROJECT_DIR$/bigdata/dd.py" />
+        <option value="$PROJECT_DIR$/bigdata/gall.py" />
+        <option value="$PROJECT_DIR$/bigdata/aaa.py" />
+        <option value="$PROJECT_DIR$/bigdata/dda.py" />
+        <option value="$PROJECT_DIR$/bigdata/adf.py" />
+        <option value="$PROJECT_DIR$/bigdata/marumaru.py" />
+        <option value="$PROJECT_DIR$/bigdata/ㅁㅁㅇㅇ.py" />
+        <option value="$PROJECT_DIR$/bigdata/marumaru2.py" />
+        <option value="$PROJECT_DIR$/bigdata/aass.py" />
+        <option value="$PROJECT_DIR$/bigdata/gamtan-01.py" />
+        <option value="$PROJECT_DIR$/bigdata/gamtan-02.py" />
+        <option value="$PROJECT_DIR$/bigdata/1223.py" />
+        <option value="$PROJECT_DIR$/bigdata/ITT_JSON2.py" />
+        <option value="$PROJECT_DIR$/bigdata/ITT_JSON.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-36" />
-    <option name="y" value="25" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-11" />
+    <option name="width" value="1961" />
+    <option name="height" value="2091" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -177,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -189,26 +130,23 @@
             <path>
               <item name="Jumptopy" type="b2602c69:ProjectViewProjectNode" />
               <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
-              <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Jumptopy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
-              <item name="Jumptopy" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter.07" type="462c0819:PsiDirectoryNode" />
+              <item name="bigdata" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Python_exercise/Jumptopy/bigdata/marumaru2.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python_exercise\Jumptopy\bigdata" />
       <recent name="D:\Python_project\Jumptopy\Jumptopy\chapter.07" />
       <recent name="D:\Python_project\Jumptopy\Jumptopy" />
     </key>
@@ -225,111 +163,111 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.asdf">
-    <configuration name="333" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.ITT_JSON">
+    <configuration name="1223" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jumptopy/chapter.07" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jumptopy/chapter.07/333.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/1223.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="444" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ITT_JSON" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jumptopy/chapter.07" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jumptopy/chapter.07/444.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/ITT_JSON.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="asdf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="ITT_JSON2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jumptopy/chapter.07" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/ITT_JSON2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="html crolling" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gamtan-01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jumptopy/chapter.07" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jumptopy/chapter.07/html crolling.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/gamtan-01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="mm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="gamtan-02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Jumptopy/chapter.07" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bigdata" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Jumptopy" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Jumptopy/chapter.07/mm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bigdata/gamtan-02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.333" />
-      <item index="1" class="java.lang.String" itemvalue="Python.444" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mm" />
-      <item index="3" class="java.lang.String" itemvalue="Python.asdf" />
-      <item index="4" class="java.lang.String" itemvalue="Python.html crolling" />
+      <item index="0" class="java.lang.String" itemvalue="Python.gamtan-01" />
+      <item index="1" class="java.lang.String" itemvalue="Python.gamtan-02" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1223" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ITT_JSON" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ITT_JSON2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.asdf" />
-        <item index="1" class="java.lang.String" itemvalue="Python.html crolling" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mm" />
-        <item index="3" class="java.lang.String" itemvalue="Python.444" />
-        <item index="4" class="java.lang.String" itemvalue="Python.333" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ITT_JSON" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ITT_JSON2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1223" />
+        <item index="3" class="java.lang.String" itemvalue="Python.gamtan-02" />
+        <item index="4" class="java.lang.String" itemvalue="Python.gamtan-01" />
       </list>
     </recent_temporary>
   </component>
@@ -452,22 +390,57 @@
       <option name="project" value="LOCAL" />
       <updated>1515658719945</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="aaaa">
+      <created>1515935666452</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1515935666452</updated>
+    </task>
+    <task id="LOCAL-00017" summary="aaaa">
+      <created>1515940612951</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515940612951</updated>
+    </task>
+    <task id="LOCAL-00018" summary="aaaa">
+      <created>1515943465217</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1515943465217</updated>
+    </task>
+    <task id="LOCAL-00019" summary="aaaa">
+      <created>1516025046953</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1516025046953</updated>
+    </task>
+    <task id="LOCAL-00020" summary="aaaa">
+      <created>1516205724894</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1516205724894</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-11" y="0" width="1961" height="2091" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16136725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19534884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.15580286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28719723" sideWeight="0.84419715" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.48410174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33157617" sideWeight="0.48410174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29064825" sideWeight="0.84419715" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39446366" sideWeight="0.8783784" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39426142" sideWeight="0.8783784" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -508,93 +481,33 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/coding dojang/1-1000.py">
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/33.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/22.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/333.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/111.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/444.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/movie1.py" />
+    <entry file="file://$USER_HOME$/Downloads/기본코드_for_네이버실시간영화랭킹.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/m.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/mm.py" />
+    <entry file="file://$USER_HOME$/Downloads/기본코드_for__nene치킨시험문제.py" />
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/nene_ver1-1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/caesar.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pandas/io/formats/format.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/상품 is 뭔들.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/가장 큰수 만들기.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.05/prac-03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.06/GuGu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/palindrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coding dojang/Amarzon Interview2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.05/188_FourCal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/328.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/327.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/330.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        <state relative-caret-position="436">
+          <caret line="1753" column="0" lean-forward="false" selection-start-line="1753" selection-start-column="0" selection-end-line="1753" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -605,153 +518,230 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.06/12.15 prac3.py">
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/330.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="468">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene2.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/순서.txt" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/335 prac.py">
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/327.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        <state relative-caret-position="252">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.06/memo.py">
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/222.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/urllib/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/sdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/nene_ver1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/daf.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/네이버랭킹.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/adfadf.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/zxcv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/dd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/html crolling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/gall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/imagecrolling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/Melon_Rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/aaa.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/메카니컬수프.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/dojang crolling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/ghostdriver.log" />
+    <entry file="file://$PROJECT_DIR$/bigdata/movie_ranking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/adf.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/nene_ver4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigdata/액셀6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="-3606">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/ertret.py" />
-    <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/NeNe_ver_2.py" />
-    <entry file="file://$USER_HOME$/Downloads/Nene_chicken_ver4.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/1987.html">
+    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.06/12.15 prac1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver1.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/액셀불러오기4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        <state relative-caret-position="-108">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver3.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/marumaru.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="60" lean-forward="false" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/2222.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver1-1.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/ㅁㅁㅇㅇ.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/cheoga.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/4444.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/1111.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/3333.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/nene_ver4.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/aass.py" />
+    <entry file="file://$PROJECT_DIR$/bigdata/1223.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="41" column="14" lean-forward="false" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/44.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/33.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/11.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/22.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/222.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/333.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/111.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/444.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/movie1.py" />
-    <entry file="file://$USER_HOME$/Downloads/기본코드_for_네이버실시간영화랭킹.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/m.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/mm.py" />
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/movie_ranking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        <state relative-caret-position="-1225">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/html crolling.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/gamtan-02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="1043">
+          <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigdata/gamtan-01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1256">
+          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-2098680013/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="3674" column="8" lean-forward="false" selection-start-line="3674" selection-start-column="8" selection-end-line="3674" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/기본코드_for__nene치킨시험문제.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/ITT_JSON2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="792">
+          <caret line="152" column="33" lean-forward="true" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/cheoga.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/ITT_JSON.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="8" column="98" lean-forward="false" selection-start-line="8" selection-start-column="98" selection-end-line="8" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3564">
+          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jumptopy/chapter.07/asdf.py">
+    <entry file="file://$PROJECT_DIR$/bigdata/marumaru2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
