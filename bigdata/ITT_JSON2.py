@@ -1,125 +1,164 @@
 import json
-from bs4 import BeautifulSoup
 
 with open('ITT_Student.json',encoding='UTF8') as json_file:
     json_object = json.load(json_file)
     json_string = json.dumps(json_object)
     data = json.loads(json_string)
 
-def print_content(a,content):
-    n = 0
-    while True:
-        if a == content:
-            n=n+1
-    if a == content:
-        if n > 1 : print('ID:' + list(i.values())[3])
-        else : lecture_presentaion(i)
+
+
 
 
 def presentation(i):
+    print("<<학생정보>>")
     print('ID:'+list(i.values())[3])
     print('이름:'+list(i.values())[4]) #이름
     print('나이:' + list(i.values())[2])
     print('주소:' + list(i.values())[1])
-    print('과거 수강횟수:'+list(i['lecture_information'].values())[1]) # 과거 수강횟수
-    print('<<수강정보>>')
-    print('강의코드:'+list(i.values())[3]) #강의코드
-    print('강의명:'+list(list(list(i.values())[0].values())[0].values())[2])
-    print('강사:'+list(list(list(i.values())[0].values())[0].values())[4])
-    print('개강일:'+list(list(list(i.values())[0].values())[0].values())[3])
-    print('종료일:'+list(list(list(i.values())[0].values())[0].values())[0])
+    print('과거 수강횟수:'+list(i['lecture_information'].values())[1])# 과거 수강횟수
     print()
-
-
-def lecture_presentaion(i):
     print('<<수강정보>>')
-    print('강의코드:' + list(i.values())[3])  # 강의코드
-    print('강의명:' + list(list(list(i.values())[0].values())[0].values())[2])
-    print('강사:' + list(list(list(i.values())[0].values())[0].values())[4])
-    print('개강일:' + list(list(list(i.values())[0].values())[0].values())[3])
-    print('종료일:' + list(list(list(i.values())[0].values())[0].values())[0])
-    print()
+    for j in list(list(i.values())[0].values())[0]:
+        print('강의코드:' + list(j.values())[1])
+        print('강의명:' + list(j.values())[2])
+        print('강사:' + list(j.values())[4])
+        print('개강일:' + list(j.values())[3])
+        print('강사:' + list(j.values())[0])
+        print()
 
-for i in data:
-    id = list(i.values())[3]
-    name = list(i.values())[4]
-    age = list(i.values())[2]
-    adress = list(i.values())[1]
-    pre_lec_num = list(i['lecture_information'].values())[1]
-    lec_code = list(i.values())[3]
-    lec_name = list(list(list(i.values())[0].values())[0].values())[2]
-    lec_teacher = list(list(list(i.values())[0].values())[0].values())[4]
-    lec_open = list(list(list(i.values())[0].values())[0].values())[3]
-    lec_close = list(list(list(i.values())[0].values())[0].values())[0]
+def lecture_presentaion(j):
+        print('<<수강정보>>')
+        print('강의코드:'+list(j.values())[1])
+        print('강의명:'+list(j.values())[2])
+        print('강사:'+list(j.values())[4])
+        print('개강일:' + list(j.values())[3])
+        print('종강일:' + list(j.values())[0])
+        print()
 
 
-
-    a = 'IoT 빅데이터 실무반'
-    print_content(a,lec_name)
-
-
-
-
-
-
-
-# for i in data: #아이디
-#     n=0
-#     a  ='ITT003'
+# a ='ITT001'
+# #아이디로 찾기
+# list_n=[]
+# for i in data:
 #     if a == list(i.values())[3]:
-#         n += 1
-#         if n > 1 : print('ID:'+list(i.values())[3])
-#         else : presentation()
-#
-# for i in data:#이름
-#     n=0
-#     a = '김인한'
+#         list_n.append(list(i.values())[3])
+#     list_n = sorted(list(set(list_n)))
+#     if len(list_n) > 1:
+#         for f in list_n:
+#             print(f)
+#     else:
+#         if a == list(i.values())[3]:
+#             presentation(i)
+
+#이름으로 찾기
+# a='김기정'
+# list_n=[]
+# for i in data:
 #     if a == list(i.values())[4]:
-#         n += 1
-#         if n > 1 : print('ID:' + list(i.values())[3])
-#         else : presentation()
-#
-# for i in data: #주소
-#     n=0
-#     a = "대구시 동구 동대구역로"
-#     if a ==list(i.values())[1]:
-#         n += 1
-#         if n > 1 : print('ID:' + list(i.values())[3])
-#         else : presentation()
-#
-# for i in data: # 수강횟수
-#     a = "0"
-#     n=0
-#     if list(i['lecture_information'].values())[1]:
-#         n+=1
-#         if n > 1 : print('ID:' + list(i.values())[3])
-#         else : presentation()
-
-# def lecture_student(data):
-#     n=0
-#     for i in data: # 강의를 수강하는 학생
-#         a = '김인한'
-#         if a ==list(i.values())[4]:
-#             n+=1
-#     for i in data:
+#         list_n.append(list(i.values())[3])
+#     list_n = sorted(list(set(list_n)))
+#     if len(list_n) > 1:
+#         for f in list_n:
+#             print(f)
+#     else:
 #         if a == list(i.values())[4]:
-#             if n > 1 : print('ID:' + list(i.values())[3])
-#             else : lecture_presentaion(i)
+#             presentation(i)
+
+#나이로 찾기
+# a='31'
+# list_n=[]
+# for i in data:
+#     if a == list(i.values())[2]:
+#         list_n.append(list(i.values())[3])
+#     list_n = sorted(list(set(list_n)))
+#     if len(list_n) > 1:
+#         for f in list_n:
+#             print(f)
+#     else:
+#         if a == list(i.values())[2]:
+#             presentation(i)
+
+#주소로 찾기
+# a = '대구광역시 달서구 성지로 14안길 17'
+# list_n=[]
+# for i in data:
+#     if a == list(i.values())[1]:
+#         list_n.append(list(i.values())[3])
+#     list_n = sorted(list(set(list_n)))
+#     if len(list_n) > 1:
+#         for f in list_n:
+#             print(f)
+#     else:
+#         if a == list(i.values())[1]:
+#             presentation(i)
+
+#수강횟수로 찾기
+# a='1'
+# list_n=[]
+# for i in data:
+#     if a == list(i['lecture_information'].values())[1]:
+#         list_n.append(list(i.values())[3])
+#     list_n = sorted(list(set(list_n)))
+#     if len(list_n) > 1:
+#         for f in list_n:
+#             print(f)
+#     else:
+#         if a == list(i['lecture_information'].values())[1]:
+#             presentation(i)
 
 
-# a = 'IoT 빅데이터 실무반'
-# def lecture_name(data): #강의명으로 검색
-#     n=0
+
+
+### 강의정보
+#강의 이름으로 찾기
+# a ='IoT 빅데이터 실무반'
+# list_n=[]
+# for i in data:
+#     for j in list(list(i.values())[0].values())[0]:
+#         if a ==list(j.values())[2]:
+#             list_n.append(list(i.values())[3])
+# list_n = sorted(list(set(list_n)))
+# if len(list_n) > 1:
+#     for f in list_n:
+#         print(f)
+# else:
 #     for i in data:
-#         # a = 'IoT 빅데이터 실무반'
-#         if a == list(list(list(i.values())[0].values())[0].values())[2]:
-#             n = n+1
+#         for j in list(list(i.values())[0].values())[0]:
+#             if a == list(j.values())[2]:
+#                 lecture_presentaion(j)
+
+#수강하는 학생명으로 찾기
+a='전수범'
+# list_n=[]
+# for i in data:
+#     for j in list(list(i.values())[0].values())[0]:
+#         if a ==list(i.values())[4]:
+#             list_n.append(list(i.values())[3])
+# list_n = sorted(list(set(list_n)))
+# if len(list_n) > 1:
+#     for f in list_n:
+#         print(f)
+# else:
 #     for i in data:
-#         if a == list(list(list(i.values())[0].values())[0].values())[2]:
-#             if n > 1 : print('ID:' + list(i.values())[3])
-#             else : lecture_presentaion(i)
-#
-#
-# lecture_name(data)
+#         for j in list(list(i.values())[0].values())[0]:
+#             if a == list(i.values())[4]:
+#                 lecture_presentaion(j)
+
+#강사이름으로 찾기
+# a = '이현구'
+# list_n=[]
+# for i in data:
+#     for j in list(list(i.values())[0].values())[0]:
+#         if a ==list(j.values())[4]:
+#             list_n.append(list(i.values())[3])
+# list_n = sorted(list(set(list_n)))
+# if len(list_n) > 1:
+#     for f in list_n:
+#         print(f)
+# else:
+#     for i in data:
+#         for j in list(list(i.values())[0].values())[0]:
+#             if a == list(j.values())[4]:
+#                 lecture_presentaion(j)
 
 

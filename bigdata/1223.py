@@ -52,6 +52,7 @@ def get_image(): #첫페이지 파싱
                         sub = list(i.div.strings)[0]
 
     except:pass
+
     URL2 ='http://marumaru.in/'+links       #링크들어가서 2번째 페이지 파싱
     html2 = requests.get(URL2,headers=hdr3).text
     soup2 = BeautifulSoup(html2, 'lxml')
