@@ -77,5 +77,30 @@
         "student_age": "31",
         "student_id": "ITT005",
         "student_name": "전민하"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "2018-08-05",
+                    "lecture_code": "OB171106",
+                    "lecture_name": "오픈소스기반 빅데이터 실무반",
+                    "lecture_open": "2018-01-06",
+                    "lecture_teacher": "이현구"
+                },
+                {
+                    "lecture_close": "2018-09-05",
+                    "lecture_code": "IB171106",
+                    "lecture_name": "IoT 빅데이터 실무반",
+                    "lecture_open": "2017-11-06",
+                    "lecture_teacher": "이현구"
+                }
+            ],
+            "lecture_pre_record": "0"
+        },
+        "student_adress": "대구광역시 서구 율하동",
+        "student_age": "29",
+        "student_id": "ITT006",
+        "student_name": "김인한"
     }
 ]

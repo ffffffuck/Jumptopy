@@ -1,4 +1,5 @@
 import json
+import os
 
 def presentation(i):
     print("<<학생정보>>")
@@ -10,15 +11,9 @@ def presentation(i):
     print()
     print('<<수강정보>>')
     for j in list(list(i.values())[0].values())[0]:
-        print('강의코드:' + list(j.values())[1])
-        print('강의명:' + list(j.values())[2])
-        print('강사:' + list(j.values())[4])
-        print('개강일:' + list(j.values())[3])
-        print('강사:' + list(j.values())[0])
-        print()
+        lecture_presentaion(j)
 
 def lecture_presentaion(j):
-    print('<<수강정보>>')
     print('강의코드:' + list(j.values())[1])
     print('강의명:' + list(j.values())[2])
     print('강사:' + list(j.values())[4])
@@ -36,18 +31,8 @@ def print_aa(what):
         else:list_n.append(list(i.values())[3])
     return list_n
 
-def print_aaa(what):
-    list_n = []
-    if a in what:
-        if len(a) == 1:
-            if a == what[0]:
-                list_n.append(list(i.values())[3])
-            else:pass
-        else:list_n.append(list(i.values())[3])
-    return list_n
-
 def fix(what):
-    i[what] = c
+    what = c
     print()
     print('변경되었습니다.')
     print()
@@ -73,8 +58,8 @@ except:
         print('ITT_Student.json 을 읽습니다.')
 
 ################### 학생 수강정보 입력 #####################
-print('<< json기반 주소록 관리 프로그램 >>')
 while True:
+    print('<< json기반 주소록 관리 프로그램 >>')
     inp = input('1. 학생 정보입력\n2. 학생 정보조회\n3. 학생 정보수정\n4. 학생 정보삭제\n5. 프로그램 종료')
     if inp == '1':
         student_Profile={}
@@ -82,11 +67,10 @@ while True:
         lecture_content = {}
         lecture_information = {}
 
-        try :
+        if os.path.isfile("id_index.txt"):
             with open("id_index.txt",'r')as infile:
                 read_index = infile.readline()
-                print("인덱스파일 엽니다")
-        except:
+        else:
             with open("id_index.txt",'w') as infile:
                 infile.write(str(0))
             with open('id_index.txt','r')as infile:
@@ -213,7 +197,7 @@ while True:
             a = input("학생이름을 입력하세요:")
             list_n=[]
             for i in data:
-                list_n += print_aaa(list(i.values())[4])
+                list_n += print_aa(list(i.values())[4])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -229,7 +213,7 @@ while True:
             list_n=[]
             for i in data:
                 for j in list(list(i.values())[0].values())[0]:
-                    list_n += print_aaa(list(j.values())[2])
+                    list_n += print_aa(list(j.values())[2])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -245,7 +229,7 @@ while True:
             list_n=[]
             for i in data:
                 for j in list(list(i.values())[0].values())[0]:
-                    list_n += print_aaa(list(j.values())[4])
+                    list_n += print_aa(list(j.values())[4])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -267,19 +251,16 @@ while True:
                 b = input('수정할 정보를 선택하세요(1:이름 2:나이 3:주소 4:과거수강횟수:')
                 if b == '1':
                     c = input('변경할 이름을 입력하세요:')
-                    fix('student_name')
+                    i['student_name'] = c
                 elif b == '2':
                     c = input('변경할 나이를 입력하세요:')
-                    fix('student_age')
+                    fix(i['student_age'])
                 elif b == '3':
                     c = input('변경할 주소를 입력하세요:')
+                    fix(i['student_adress'])
                 elif b =='4':
                     c = input('변경할 수강횟수를 입력하세요:')
-                    i['lecture_information']['lecture_pre_record'] = c
-                    print()
-                    print('변경되었습니다.')
-                    print()
-                    presentation(i)
+                    fix(i['lecture_information']['lecture_pre_record'])
             elif a == '0':
                 pass
 
