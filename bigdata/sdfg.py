@@ -26,15 +26,39 @@ def lecture_presentaion(j):
     print('종강일:' + list(j.values())[0])
     print()
 
+def print_aa(what):
+    list_n=[]
+    if a in what:
+        if len(a) ==1:
+            if a == what[0]:
+                list_n.append(list(i.values())[3])
+            else:pass
+        else:list_n.append(list(i.values())[3])
+    return list_n
+
+def print_aaa(what):
+    list_n = []
+    if a in what:
+        if len(a) == 1:
+            if a == what[0]:
+                list_n.append(list(i.values())[3])
+            else:pass
+        else:list_n.append(list(i.values())[3])
+    return list_n
+
+def fix(what):
+    i[what] = c
+    print()
+    print('변경되었습니다.')
+    print()
+    presentation(i)
+
 
 def save():
-    with open("id_index.txt", 'w') as infile:
-        infile.write(str(int(read_index) + 1))
     with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
         readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
         outfile.write(readable_result)
         print('ITT_Student.json SAVED')
-
 
 data = []
 
@@ -47,7 +71,6 @@ except:
     with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
         readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
         print('ITT_Student.json 을 읽습니다.')
-
 
 ################### 학생 수강정보 입력 #####################
 print('<< json기반 주소록 관리 프로그램 >>')
@@ -62,6 +85,7 @@ while True:
         try :
             with open("id_index.txt",'r')as infile:
                 read_index = infile.readline()
+                print("인덱스파일 엽니다")
         except:
             with open("id_index.txt",'w') as infile:
                 infile.write(str(0))
@@ -69,7 +93,7 @@ while True:
                 read_index = infile.readline()
 
 
-        student_Profile['student_id'] = 'ITT'+'{:0=3}'.format(int(read_index)+1)
+        student_Profile['student_id'] = 'ITT'+('{:0=3}'.format(int(read_index)+1))
 
         student_Profile['student_name'],student_Profile['student_age'] = input("학생이름과 나이를 입력하세요:").split(' ')
 
@@ -97,18 +121,16 @@ while True:
             lecture_content = {}
 
             f = input("1:강의 더 입력하기 2:종료")
-            if f =='1':
-                pass
-            if f =='2':
-                break
+            if f =='1': pass
+            if f =='2':break
 
         data.append(student_Profile)
-
+        with open("id_index.txt", 'w') as infile:
+            infile.write(str(int(read_index) + 1))
         save()
 
+
 ##################학생 수강정보 입력 ################
-
-
 
     elif inp =='2':
         print("\n<<학생 정보를 조회합니다>>\n")
@@ -118,37 +140,27 @@ while True:
                 presentation(i)
 
         elif jo =='1':
-            a = input("아이디를 입력하세요:")
             list_n=[]
+            a = input("id를 입력하세요")
             for i in data:
-                if a in list(i.values())[3]:
-                    if len(a) ==1:
-                        if a == list(i.values())[3][0]:
-                            list_n.append(list(i.values())[3])
-                        else:pass
-                    else:list_n.append(list(i.values())[3])
+                list_n+=print_aa(list(i.values())[3])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
-                for f in list_n:
-                 print(f)
+                for f in list_n :
+                    print(f)
             elif len(list_n) == 1:
                 for i in data:
-                    if a in list(data[i].values())[3]:
+                    if a in list(i.values())[3]:
                         presentation(i)
 
         elif jo =='2':
-            a = input("이름을 입력하세요:")
             list_n=[]
+            a = input("이름을 입력하세요")
             for i in data:
-                if a in list(i.values())[4]:
-                    if len(a) ==1:
-                        if a == list(i.values())[4][0]:
-                            list_n.append(list(i.values())[3])
-                        else:pass
-                    else:list_n.append(list(i.values())[3])
+                list_n+=print_aa(list(i.values())[4])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
-                for f in list_n:
+                for f in list_n :
                     print(f)
             elif len(list_n) == 1:
                 for i in data:
@@ -156,19 +168,13 @@ while True:
                         presentation(i)
 
         elif jo =='3':
-            a = input("나이를 입력하세요:")
             list_n=[]
+            a = input("나이를 입력하세요")
             for i in data:
-                if a in list(i.values())[2]:
-                    if len(a) ==1:
-                        if a == list(i.values())[2][0]:
-                            list_n.append(list(i.values())[3])
-                        else:pass
-                    else:list_n.append(list(i.values())[3])
-                list_n = sorted(list(set(list_n)))
+                list_n+=print_aa(list(i.values())[2])
+            list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
-                for f in list_n:
-                    print("<<결과를 출력합니다.>>")
+                for f in list_n :
                     print(f)
             elif len(list_n) == 1:
                 for i in data:
@@ -179,15 +185,10 @@ while True:
             a = input("주소를 입력하세요:")
             list_n=[]
             for i in data:
-                if a in list(i.values())[1]:
-                    if len(a) ==1:
-                        if a == list(i.values())[1][0]:
-                            list_n.append(list(i.values())[3])
-                        else:pass
-                    else:list_n.append(list(i.values())[3])
-                list_n = sorted(list(set(list_n)))
+                list_n+=print_aa(list(i.values())[1])
+            list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
-                for f in list_n:
+                for f in list_n :
                     print(f)
             elif len(list_n) == 1:
                 for i in data:
@@ -198,9 +199,8 @@ while True:
             a = input("수강횟수를 입력하세요:")
             list_n=[]
             for i in data:
-                if a == list(i['lecture_information'].values())[1]:
-                    list_n.append(list(i.values())[3])
-                list_n = sorted(list(set(list_n)))
+                list_n += print_aa(list(i['lecture_information'].values())[1])
+            list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
                     print(f)
@@ -213,15 +213,7 @@ while True:
             a = input("학생이름을 입력하세요:")
             list_n=[]
             for i in data:
-                for j in list(list(i.values())[0].values())[0]:
-                    if a in list(i.values())[4]:
-                        if len(a) == 1:
-                            if a == list(i.values())[4][0]:
-                                list_n.append(list(i.values())[3])
-                            else:
-                                pass
-                        else:
-                            list_n.append(list(i.values())[3])
+                list_n += print_aaa(list(i.values())[4])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -237,14 +229,7 @@ while True:
             list_n=[]
             for i in data:
                 for j in list(list(i.values())[0].values())[0]:
-                    if a in list(j.values())[2]:
-                        if len(a) == 1:
-                            if a == list(j.values())[2][0]:
-                                list_n.append(list(i.values())[3])
-                            else:
-                                pass
-                        else:
-                            list_n.append(list(i.values())[3])
+                    list_n += print_aaa(list(j.values())[2])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -260,14 +245,7 @@ while True:
             list_n=[]
             for i in data:
                 for j in list(list(i.values())[0].values())[0]:
-                    if a in list(j.values())[4]:
-                        if len(a) == 1:
-                            if a == list(j.values())[4][0]:
-                                list_n.append(list(i.values())[3])
-                            else:
-                                pass
-                        else:
-                            list_n.append(list(i.values())[3])
+                    list_n += print_aaa(list(j.values())[4])
             list_n = sorted(list(set(list_n)))
             if len(list_n) > 1:
                 for f in list_n:
@@ -277,7 +255,9 @@ while True:
                     for j in list(list(i.values())[0].values())[0]:
                         if a in list(j.values())[4]:
                             lecture_presentaion(j)
+
 #################### 학생정보 수강정보 수정 하기 ######################################
+
     elif inp =='3':
         for i in data:
             presentation(i)
@@ -287,25 +267,12 @@ while True:
                 b = input('수정할 정보를 선택하세요(1:이름 2:나이 3:주소 4:과거수강횟수:')
                 if b == '1':
                     c = input('변경할 이름을 입력하세요:')
-                    i['student_name'] = c
-                    print()
-                    print('변경되었습니다.')
-                    print()
-                    presentation(i)
+                    fix('student_name')
                 elif b == '2':
                     c = input('변경할 나이를 입력하세요:')
-                    i['student_age'] = c
-                    print()
-                    print('변경되었습니다.')
-                    print()
-                    presentation(i)
+                    fix('student_age')
                 elif b == '3':
                     c = input('변경할 주소를 입력하세요:')
-                    i['student_adress'] = c
-                    print()
-                    print('변경되었습니다.')
-                    print()
-                    presentation(i)
                 elif b =='4':
                     c = input('변경할 수강횟수를 입력하세요:')
                     i['lecture_information']['lecture_pre_record'] = c

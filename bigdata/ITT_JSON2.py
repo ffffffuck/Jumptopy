@@ -5,10 +5,6 @@ with open('ITT_Student.json',encoding='UTF8') as json_file:
     json_string = json.dumps(json_object)
     data = json.loads(json_string)
 
-
-
-
-
 def presentation(i):
     print("<<학생정보>>")
     print('ID:'+list(i.values())[3])
@@ -51,18 +47,18 @@ def lecture_presentaion(j):
 #             presentation(i)
 
 #이름으로 찾기
-# a='김기정'
-# list_n=[]
-# for i in data:
-#     if a == list(i.values())[4]:
-#         list_n.append(list(i.values())[3])
-#     list_n = sorted(list(set(list_n)))
-#     if len(list_n) > 1:
-#         for f in list_n:
-#             print(f)
-#     else:
-#         if a == list(i.values())[4]:
-#             presentation(i)
+a='김기정'
+list_n=[]
+for i in data:
+    if a == list(i.values())[4]:
+        list_n.append(list(i.values())[3])
+    list_n = sorted(list(set(list_n)))
+    if len(list_n) > 1:
+        for f in list_n:
+            print(f)
+    else:
+        if a == list(i.values())[4]:
+            presentation(i)
 
 #나이로 찾기
 # a='31'
@@ -128,7 +124,7 @@ def lecture_presentaion(j):
 #                 lecture_presentaion(j)
 
 #수강하는 학생명으로 찾기
-a='전수범'
+# a='전수범'
 # list_n=[]
 # for i in data:
 #     for j in list(list(i.values())[0].values())[0]:
