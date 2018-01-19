@@ -4,10 +4,18 @@ import os
 data = []
 
 def save():
-    with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
-        readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
-        outfile.write(readable_result)
-        print('ITT_Student.json SAVED\n')
+    f = input("1. 기존경로에 파일저장\n2. 다른경로에 파일저장\n")
+    if f == '1':
+        with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
+            readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
+            outfile.write(readable_result)
+            print('ITT_Student.json 가 저장되었습니다.\n')
+    elif f =='2':
+        direct = input("파일을 생성할 경로를 입력하세요:")
+        with open(direct+'\ITT_Student.json', 'w', encoding='utf8') as outfile:
+            readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
+            outfile.write(readable_result)
+            print('\n'+direct+'ITT_Student.json 에 저장되었습니다.\n')
 
 def presentation(i):
     print("\n<<학생정보>>\n")
@@ -25,57 +33,52 @@ def lecture_presentaion(j):
     print('강의명:' + j['lecture_name'])
     print('강사:' + j['lecture_teacher'])
     print('개강일:' + j['lecture_open'])
-    print('종강일:' + j['lecture_close'])
-    print()
+    print('종강일:' + j['lecture_close']+'\n')
+
+def part_search(list_n,i,what):
+    if a in what:
+        if len(a) == 1:
+            if a == what[0]:list_n.append(i['student_id'])
+            else:pass
+        else:list_n.append(i['student_id'])
+        return list_n
+
+def print_id(list_n):
+    if len(list_n) > 1:
+        print("중복결과가 나왔음으로 ID만 출력합니다.\n")
+        for f in list_n:
+            print("ID : "+f)
 
 def lec_print(what):
     list_n = []
     for i in data:
-        for j in i['lecture_information']['lecture_course']:
-            if a in j[what]:
-                if len(a) == 1:
-                    if a == j[what][0]:
-                        list_n.append(i['student_id'])
-                    else:
-                        pass
-                else:
-                    list_n.append(i['student_id'])
+        if what == 'student_name':
+            part_search(list_n,i,i[what])
+        else:
+            for j in i['lecture_information']['lecture_course']:
+                part_search(list_n,i,j[what])
     list_n = sorted(list(set(list_n)))
-    if len(list_n) > 1:
-        print("중복결과가 나왔음으로 ID만 출력합니다.\n")
-        for f in list_n:
-            print(f)
-    elif len(list_n) == 1:
+    print_id(list_n)
+    if len(list_n) == 1:
         for i in data:
             for j in i['lecture_information']['lecture_course']:
-                if a in j[what]:
-                    lecture_presentaion(j)
+                if what == 'student_name':
+                    if a in i[what]:
+                        lecture_presentaion(j)
+                else:
+                    if a in j[what]:
+                        lecture_presentaion(j)
 
 def student_print(what):
     list_n=[]
     for i in data:
         if what == 'lecture_pre_record':
-            if a in i['lecture_information'][what] :
-                if len(a) == 1:
-                    if a == i['lecture_information'][what][0]:
-                        list_n.append(i['student_id'])
-                    else:pass
-                else:
-                    list_n.append(i['student_id'])
-        else:
-            if a in i[what]:
-                if len(a) == 1:
-                    if a == i[what][0]:
-                        list_n.append(i['student_id'])
-                    else:pass
-                else:
-                    list_n.append(i['student_id'])
+            part_search(list_n,i,i['lecture_information'][what])
+
+        else:part_search(list_n,i,i[what])
     list_n = sorted(list(set(list_n)))
-    if len(list_n) > 1:
-        print("중복결과가 나왔음으로 ID만 출력합니다.\n")
-        for f in list_n:
-            print("       "+f)
-    elif len(list_n) == 1:
+    print_id(list_n)
+    if len(list_n) == 1:
         for i in data:
             if what == 'lecture_pre_record':
                 if a in i['lecture_information'][what]:
@@ -87,15 +90,6 @@ def student_print(what):
 ################### 학생 수강정보 입력 #####################
 while True:
 
-    if os.path.isfile("ITT_Student.json"):
-        with open('ITT_Student.json', encoding='UTF8') as json_file:
-            json_object = json.load(json_file)
-            json_string = json.dumps(json_object)
-            data = json.loads(json_string)
-    else:
-        with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
-            readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
-
     if os.path.isfile("id_index.txt"):
         with open("id_index.txt",'r')as infile:
             read_index = infile.readline()
@@ -105,9 +99,33 @@ while True:
         with open('id_index.txt','r')as infile:
             read_index = infile.readline()
 
+    if os.path.isfile("ITT_Student.json"):
+        with open('ITT_Student.json', encoding='UTF8') as json_file:
+            json_object = json.load(json_file)
+            json_string = json.dumps(json_object)
+            data = json.loads(json_string)
+    else:
+        f = input("파일이 없습니다.\n1. 경로 입력하기\n2. 현재 경로에 파일생성하기\n")
+        if f == '1':
+            directory = input("경로를 입력하세요:")
+            try:
+                with open(directory+'\ITT_Student.json', encoding='UTF8') as json_file:
+                    json_object = json.load(json_file)
+                    json_string = json.dumps(json_object)
+                    data = json.loads(json_string)
+            except:
+                print("옳은경로를 입력하세요.")
+                continue
+        elif f == '2':
+            with open('ITT_Student.json', 'w', encoding='utf8') as outfile:
+                    readable_result = json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
+        else:
+            print("옳은값을 입력하세요:")
+            continue
+
     print('<< json기반 주소록 관리 프로그램 >>')
     print('1. 학생 정보입력\n2. 학생 정보조회\n3. 학생 정보수정\n4. 학생 정보삭제\n5. 프로그램 종료')
-    inp = input('   입력:')
+    inp = input('입력:')
     if inp == '1':
         student_Profile={}
         lecture_course=[]
@@ -116,22 +134,22 @@ while True:
 
         student_Profile['student_id'] = 'ITT'+('{:0=3}'.format(int(read_index)+1))
 
-        student_Profile['student_name'],student_Profile['student_age'] = input("\n학생이름과 나이를 입력하세요:").split(' ')
+        student_Profile['student_name'],student_Profile['student_age'] = input("\n학생이름과 나이를 입력하세요:(ex:이창현,31 | 전민하,32..):\n").split(' ')
 
-        student_Profile['student_adress'] = input("\n주소를 입력하세요:")
+        student_Profile['student_adress'] = input("\n주소를 입력하세요(ex:대구시 남구 대명동...):\n")
 
-        lecture_information['lecture_pre_record'] = input("\n과거 학원에서 수강한적이 있다면 횟수를 입력하세요:")
-
+        lecture_information['lecture_pre_record'] = input("\n과거 학원에서 수강한적이 있다면 횟수를 입력하세요(ex:0,3...):\n")
+        f = '0'
         while True:
-            lecture_content['lecture_code'] = input("\n강의코드를 입력하세요:")
+            lecture_content['lecture_code'] = input("\n강의코드를 입력하세요(ex:IB171106,OB171106):\n")
 
-            lecture_content['lecture_name'] = input("\n강의명을 입력하세요:")
+            lecture_content['lecture_name'] = input("\n강의명을 입력하세요(ex:IoT 빅데이터실무반, 오픈소스기반 빅데이터 실무반...):\n")
 
-            lecture_content['lecture_teacher'] = input("\n강사를 입력하세요:")
+            lecture_content['lecture_teacher'] = input("\n강사를 입력하세요(ex:이현구):\n")
 
-            lecture_content['lecture_open'] = input("\n개강일을 입력하세요:")
+            lecture_content['lecture_open'] = input("\n개강일을 입력하세요(ex:2017-11-06):\n")
 
-            lecture_content['lecture_close'] = input("\n종강일을 입력하세요:")
+            lecture_content['lecture_close'] = input("\n종강일을 입력하세요(ex:2018-9-05):\n")
 
             lecture_course.append(lecture_content)
 
@@ -140,107 +158,174 @@ while True:
             student_Profile['lecture_information'] = lecture_information
 
             lecture_content = {}
-            print("1. 강의 추가 입력\n2. 뒤로가기")
+            print("1. 강의 추가 입력\n2.저장 후 첫화면으로")
             f = input("입력:")
-            if f =='1': pass
-            elif f == '2':break
-
-        data.append(student_Profile)
-        with open("id_index.txt", 'w') as infile:
-            infile.write(str(int(read_index) + 1))
-        save()
+            if f =='1': continue
+            elif f == '2':
+                data.append(student_Profile)
+                with open("id_index.txt", 'w') as infile:
+                    infile.write(str(int(read_index) + 1))
+                save()
+                break
+        if f =='2':
+            continue
 
 ##################학생 수강정보 입력 ################
     elif inp =='2':
         print("\n<<학생 정보를 조회합니다>>\n")
-        print('0. 전체학생정보 조회\n1. ID로 조회\n2. 이름으로 조회\n3. 나이로 조회\n4. 주소로 조회\n5. 과거 수강 횟수로 조회\n\n<<강의 정보를 조회합니다>>\n\n6. 학생명으로 강의조회\n7. 강의명으로 강의조회\n8. 강사명으로 강의조회\n9. 첫페이지로')
+        print('1. 전체학생정보 조회\n2. ID로 조회\n3. 이름으로 조회\n4. 나이로 조회\n5. 주소로 조회\n6. 과거 수강 횟수로 조회\n\n<<강의 정보를 조회합니다>>\n\n7. 학생명으로 강의조회\n8. 강의명으로 강의조회\n9. 강사명으로 강의조회\n10. 첫페이지로')
         jo = input("입력:")
-        if jo =='0':
+        if jo =='1':
             for i in data:
                 presentation(i)
 
-        elif jo =='1':
+        elif jo =='2':
             a = input("id를 입력하세요:")
             student_print('student_id')
 
-        elif jo =='2':
+        elif jo =='3':
             a = input("이름을 입력하세요:")
             student_print('student_name')
 
-        elif jo =='3':
+        elif jo =='4':
             a = input("나이를 입력하세요:")
             student_print('student_age')
 
-        elif jo =='4':
-            list_n=[]
-            student_print('student_adress:')
-
         elif jo =='5':
+            list_n=[]
+            student_print('student_adress')
+
+        elif jo =='6':
             a = input("수강횟수를 입력하세요:")
             student_print('lecture_pre_record')
 
-        elif jo =='6':
-            a = input("학생이름을 입력하세요:")
-            lec_print('student_id')
-
         elif jo =='7':
+            a = input("학생이름을 입력하세요:")
+            lec_print('student_name')
+
+        elif jo =='8':
             a = input("강의명을 입력하세요:")
             lec_print('lecture_name')
 
-        elif jo =='8':
+        elif jo =='9':
             a = input("강사명을 입력하세요:")
             lec_print('lecture_teacher')
+        else:
+            print("옳은값을 입력하세요.")
 
 #################### 학생정보 수강정보 수정 하기 ######################################
     elif inp =='3':
-        for i in data:
-            presentation(i)
-        a = input("수정할 학생의 id를 입력하세요(0입력시 첫페이지로):\n")
-        if a == '0':
-            continue
-        else: pass
-        for i in data:
-            if a == list(i.values())[3]:
-                print('수정할 정보를 선택하세요.\n1. 이름\n2. 나이\n3. 주소\n4. 과거 수강횟수')
-                b=input('입력:')
-                if b =='1':
-                    i['student_name'] = input('변경할 이름을 입력하세요:')
-                elif b == '2':
-                    i['student_age'] = input('변경할 이름을 입력하세요:')
-                elif b == '3':
-                    i['student_adress'] = input('변경할 주소를 입력하세요:')
-                elif b =='4':
-                     i['lecture_information']['lecture_pre_record'] = input('변경할 수강횟수를 입력하세요:')
-                print("변경되었습니다.")
+        a = ''
+        while True:
+            b= '0'
+            for i in data:
                 presentation(i)
+            a = input("수정할 학생의 id를 입력하세요(0입력시 첫화면으로):\n")
+            if a == '0':
+                break
+            else: pass
+            f = '0'
+            for i in data:
+                if a == list(i.values())[3]:
+                    print('수정할 정보를 선택하세요.\n1. 이름\n2. 나이\n3. 주소\n4. 과거 수강횟수\n5. 강의 추가\n6. 뒤로가기')
+                    b=input('입력:')
+                    if b =='1':
+                        i['student_name'] = input('변경할 이름을 입력하세요:')
 
-        save()
+                    elif b == '2':
+                        i['student_age'] = input('변경할 나이를 입력하세요:')
+
+                    elif b == '3':
+                        i['student_adress'] = input('변경할 주소를 입력하세요:')
+
+                    elif b == '4':
+                        i['lecture_information']['lecture_pre_record'] = input('변경할 수강횟수를 입력하세요:')
+
+                    elif b =='5':
+                        lecture_content = {}
+                        lecture_content['lecture_code'] = input("\n강의코드를 입력하세요(ex:IB171106,OB171106):\n")
+
+                        lecture_content['lecture_name'] = input("\n강의명을 입력하세요(ex:IoT 빅데이터실무반, 오픈소스기반 빅데이터 실무반...):\n")
+
+                        lecture_content['lecture_teacher'] = input("\n강사를 입력하세요(ex:이현구):\n")
+
+                        lecture_content['lecture_open'] = input("\n개강일을 입력하세요(ex:2017-11-06):\n")
+
+                        lecture_content['lecture_close'] = input("\n종강일을 입력하세요(ex:2018-9-05):\n")
+
+                        i['lecture_information']['lecture_course'].append(lecture_content)
+
+                    elif b == '6':
+                        break
+                    else:
+                        print("옳은값을 입력하세요.")
+                        continue
+                    print('정말 수정하시겠습니까?(y/n)')
+                    f = input("입력")
+                    if f == 'y':
+                        save()
+                        pass
+                    elif f =='n':
+                        break
+            if f =='n':
+                continue
+
+            if b =='6':
+                continue
+        if a =='0':
+            continue
 
 ######################## 학생정보 수강정보 삭제하기 #############################
     elif inp == '4':
-        print("삭제할 요소를 선택하세요\n1. 학생정보\n2. 강의정보\n3. 첫페이지로")
-        del_con = input("입력:")
-        if del_con== '1':
-            a = input("삭제할 학생의 ID를 입력하세요:")
+        del_con=0
+        while True:
+            print("삭제할 요소를 선택하세요\n1. 학생정보\n2. 강의정보\n3. 첫페이지로")
+            del_con = input("입력:")
+            deldel = 'y'
             for i in data:
-                if a == i['student_id']:
-                    data_index = data.index(i)
-                    del data[data_index]
-            print("\n삭제 되었습니다.\n")
-        elif del_con =='2':
-            a = input("삭제할 강의를 가진 학생 ID를 입력하세요:")
-            b = input("삭제할 강의코드를 입력하세요:")
-            for i in data:
-                if a == i['student_id']:
-                    for j in i['lecture_information']['lecture_course']:
-                        if b == j['lecture_code']:
-                            lec_index = i['lecture_information']['lecture_course'].index(j)
-                            del i['lecture_information']['lecture_course'][lec_index]
-                            print("\n삭제되었습니다.\n")
-        elif del_con =='3':
+                presentation(i)
+            if del_con== '1':
+                a = input("삭제할 학생의 ID를 입력하세요:")
+                for i in data:
+                    if a == i['student_id']:
+                        data_index = data.index(i)
+                        print("정말 삭제하시겠습니까?(y/n)")
+                        deldel = input('입력:')
+                        if deldel == 'y':
+                            del data[data_index]
+                            print("\n삭제 되었습니다.\n")
+                            break
+                        elif deldel == 'n':
+                            break
+                if deldel == 'n':
+                    continue
+
+            elif del_con =='2':
+                for i in data:
+                    presentation(i)
+                a = input("삭제할 강의를 포함한 학생 ID를 입력하세요:")
+                b = input("삭제할 강의코드를 입력하세요:")
+                for i in data:
+                    if a == i['student_id']:
+                        for j in i['lecture_information']['lecture_course']:
+                            if b == j['lecture_code']:
+                                lec_index = i['lecture_information']['lecture_course'].index(j)
+                                print("정말 삭제하시겠습니까?(y/n)")
+                                deldel = input("입력:")
+                                if deldel == 'y':
+                                    del i['lecture_information']['lecture_course'][lec_index]
+                                    print("\n삭제되었습니다.\n")
+                                    save()
+                                    break
+                                elif deldel =='n':
+                                    break
+                if deldel =='n':
+                    continue
+            elif del_con =='3':
+                break
+        if del_con =='3':
             continue
-
-        save()
-
     elif inp == '5':
+        save()
         exit()
+    else:print("옳은값을 입력하세요.")
