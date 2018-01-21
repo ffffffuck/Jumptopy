@@ -62,6 +62,7 @@ def get_image():
         except:pass
         download(list(i.img.attrs.values())[0],'마루마루/%s/%s.gif'%(rep(a),rep(a)))
         aa = i.find_all("a",attrs={"target":"_blank"})
+
         for j in aa:
             comic_URL=list(j.attrs.values())[1]
             comic_name=list(j.strings)[0]

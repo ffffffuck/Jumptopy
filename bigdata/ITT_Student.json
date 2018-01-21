@@ -116,5 +116,48 @@
         "student_age": "29",
         "student_id": "ITT006",
         "student_name": "김인한"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "55",
+                    "lecture_code": "55",
+                    "lecture_name": "55",
+                    "lecture_open": "55",
+                    "lecture_teacher": "55"
+                },
+                {
+                    "lecture_close": "55",
+                    "lecture_code": "55",
+                    "lecture_name": "55",
+                    "lecture_open": "55",
+                    "lecture_teacher": "55"
+                }
+            ],
+            "lecture_pre_record": "55"
+        },
+        "student_adress": "55",
+        "student_age": "55",
+        "student_id": "ITT004",
+        "student_name": "55"
+    },
+    {
+        "lecture_information": {
+            "lecture_course": [
+                {
+                    "lecture_close": "ㅁㅇㄹ",
+                    "lecture_code": "ㅁㅇㄴㄹ",
+                    "lecture_name": "ㅁㄹㅇ",
+                    "lecture_open": "ㅁㄴㅇㄹ",
+                    "lecture_teacher": "ㅁㄴㅇㄹ"
+                }
+            ],
+            "lecture_pre_record": "ㅇㄴㄹ"
+        },
+        "student_adress": "ㅁㅇㄹ",
+        "student_age": "ㅁㅇㄹ",
+        "student_id": "ITT008",
+        "student_name": "ㅁㄴㄹㅇ"
     }
 ]
