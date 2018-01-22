@@ -128,7 +128,7 @@ if __name__=='__main__':
 
         start_time = time.time()
 
-        pool = Pool(processes=16)
+        pool = Pool(processes=4)
         pool.map(get_image, get_link())
         print("\n다운로드 완료")
 

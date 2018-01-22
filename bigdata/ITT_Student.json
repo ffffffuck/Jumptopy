@@ -8,20 +8,6 @@
                     "lecture_name": "IoT 빅데이터 실무반",
                     "lecture_open": "2017-11-06",
                     "lecture_teacher": "이현구"
-                },
-                {
-                    "lecture_close": "adsff",
-                    "lecture_code": "dfd",
-                    "lecture_name": "dgdfg",
-                    "lecture_open": "dsfga",
-                    "lecture_teacher": "dfgsfdg"
-                },
-                {
-                    "lecture_close": "asdfgd",
-                    "lecture_code": "asdf",
-                    "lecture_name": "asdfasdg",
-                    "lecture_open": "asdfsa",
-                    "lecture_teacher": "asdfadsg"
                 }
             ],
             "lecture_pre_record": "2"
@@ -29,7 +15,7 @@
         "student_adress": "대구광역시 파티마 병원 옆 포시즌 302호",
         "student_age": "31",
         "student_id": "ITT001",
-        "student_name": "김기종"
+        "student_name": "김기정"
     },
     {
         "lecture_information": {
@@ -121,43 +107,43 @@
         "lecture_information": {
             "lecture_course": [
                 {
-                    "lecture_close": "55",
-                    "lecture_code": "55",
-                    "lecture_name": "55",
-                    "lecture_open": "55",
-                    "lecture_teacher": "55"
+                    "lecture_close": "1",
+                    "lecture_code": "1",
+                    "lecture_name": "1",
+                    "lecture_open": "1",
+                    "lecture_teacher": "1"
                 },
                 {
-                    "lecture_close": "55",
-                    "lecture_code": "55",
-                    "lecture_name": "55",
-                    "lecture_open": "55",
-                    "lecture_teacher": "55"
+                    "lecture_close": "6",
+                    "lecture_code": "2",
+                    "lecture_name": "3",
+                    "lecture_open": "5",
+                    "lecture_teacher": "4"
                 }
             ],
-            "lecture_pre_record": "55"
+            "lecture_pre_record": "1"
         },
-        "student_adress": "55",
-        "student_age": "55",
+        "student_adress": "1",
+        "student_age": "1",
         "student_id": "ITT004",
-        "student_name": "55"
+        "student_name": "1"
     },
     {
         "lecture_information": {
             "lecture_course": [
                 {
-                    "lecture_close": "ㅁㅇㄹ",
-                    "lecture_code": "ㅁㅇㄴㄹ",
-                    "lecture_name": "ㅁㄹㅇ",
-                    "lecture_open": "ㅁㄴㅇㄹ",
-                    "lecture_teacher": "ㅁㄴㅇㄹ"
+                    "lecture_close": "3",
+                    "lecture_code": "3",
+                    "lecture_name": "3",
+                    "lecture_open": "3",
+                    "lecture_teacher": "3"
                 }
             ],
-            "lecture_pre_record": "ㅇㄴㄹ"
+            "lecture_pre_record": "3"
         },
-        "student_adress": "ㅁㅇㄹ",
-        "student_age": "ㅁㅇㄹ",
-        "student_id": "ITT008",
-        "student_name": "ㅁㄴㄹㅇ"
+        "student_adress": "3",
+        "student_age": "3",
+        "student_id": "ITT007",
+        "student_name": "ddl"
     }
 ]
