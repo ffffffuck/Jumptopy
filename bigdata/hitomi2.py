@@ -141,7 +141,6 @@ def get_link():
 
         for i in range(len(manga_index_list)):
             image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist)
-        print(image_list)
         return image_list
 
 
