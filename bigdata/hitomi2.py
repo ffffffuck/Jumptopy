@@ -9,6 +9,7 @@ from multiprocessing import Pool
 from requests import get
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 hdr = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
@@ -18,8 +19,8 @@ options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("disable-gpu")
 
-path ='C:\Python_exercise\Jumptopy\\bigdata\\new\\chromedriver'
-
+# path ='C:\Python_exercise\Jumptopy\\bigdata\\new\\chromedriver'
+path = 'C:\\pyinstaller\\chromedriver'
 
 def rep(a):       #파일 이름 특수문자 처리
     rep=""
@@ -155,8 +156,8 @@ def get_image(image_list):
     else:os.mkdir("히토미/[%s]%s"%(i_artist,i_dir_name))
     print('%s폴더에 %s를 받는중...'%(i_dir_name,i_name))
 
-    if os.path.isfile("히토미/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name))):pass
-    else:urllib.request.urlretrieve(i_link, "히토미/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name)))
+    try:urllib.request.urlretrieve(i_link, "히토미/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name)))
+    except:pass
 
 
 if __name__=='__main__':

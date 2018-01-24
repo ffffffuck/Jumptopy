@@ -104,7 +104,7 @@ if __name__=='__main__':
         print("<< 갤 짤 존나 긁어오기 ver0.5 >>\n")
         print("설명:갤에 있는 짤들을 최대 10페이지까지 싹다 긁어옵니다.\n")
 
-        pool = Pool(processes=4)
+        pool = Pool(processes=8)
         pool.map(get_image, get_link())
         print("\n다운로드 완료")
 
