@@ -1,0 +1,585 @@
+﻿난이도,문제,문제내용,게시자,해답
+Lv. 1,Multiples of 3 and 5,"
+오랜만에 퀴즈하나 투척합니다.
+프로젝트 오일러라고 들어보셨나요?
+프로그래밍 퀴즈를 풀이하는 유명한 곳인데요..
+그곳에 있는 첫번째 문제를 이곳 코딩도장에 한번 소개해 볼까 합니다.
+http://projecteuler.net/problem=1
+[문제]
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+[번역]
+
+10미만의 자연수에서 3과 5의 배수를 구하면 3,5,6,9이다. 이들의 총합은 23이다.  
+1000미만의 자연수에서 3,5의 배수의 총합을 구하라.
+
+정답은 위 사이트에서 직접 확인 가능합니다.
+",Seunghyuck Kim,"
+>>> sum(list([x for x in range(1000) if x%3==0 or x%5==0]))
+
+filter, lambda 없이 
+List comprehension, 매력적이군요.
+"
+Lv. 1,탭을 공백 문자로 바꾸기,"
+A씨는 개발된 소스코드를 특정업체에 납품하려고 한다. 개발된 소스코드들은 탭으로 들여쓰기가 된것, 공백으로 들여쓰기가 된 것들이 섞여 있다고 한다. A씨는 탭으로 들여쓰기가 된 모든 소스를 공백 4개로 수정한 후 납품할 예정이다.
+A씨를 도와줄 수 있도록 소스코드내에 사용된 탭(Tab) 문자를 공백 4개(4 space)로 바꾸어 주는 프로그램을 작성하시오.
+",장창원,"
+파이썬 3.4 입니다.
+filename=input(""Enter your file name : "")
+tempfile=open(filename)
+tempfile=tempfile.read()
+temp_str=tempfile.replace(""\t"",""    "")
+tempfile=open(filename,'w')
+tempfile.write(temp_str)
+tempfile.close()
+
+"
+Lv. 1,게시판 페이징,"
+A씨는 게시판 프로그램을 작성하고 있다. 
+A씨는 게시물의 총 건수와 한 페이지에 보여줄 게시물수를 입력으로 주었을 때 총 페이지수를 리턴하는 프로그램이 필요하다고 한다.
+
+입력 : 총건수(m), 한페이지에 보여줄 게시물수(n) (단 n은 1보다 크거나 같다. n >= 1)
+출력 : 총페이지수
+
+A씨가 필요한 프로그램을 작성하시오.
+
+예) 프로그램 수행 시 다음과 같은 결과값이 나와야 함.
+
+
+
+m
+n
+출력
+
+
+
+
+0
+1
+0
+
+
+1
+1
+1
+
+
+2
+1
+2
+
+
+1
+10
+1
+
+
+10
+10
+1
+
+
+11
+10
+2
+
+
+
+",son129888,"
+파이썬입니다.
+import math
+
+m = int(input('총건수: '))
+n = int(input('한페이지에 보여줄 게시물수: '))
+
+print(math.ceil(m/n))
+
+"
+Lv. 1,다음 입사문제 중에서,"
+1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)
+예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.
+",dsge foc,"
+python 2.7
+>>> s= [1, 3, 4, 8, 13, 17, 20]
+>>> pairs = zip(s[0:], s[1:])
+>>> pairs.sort(key=lambda x:x[1]-x[0])
+>>> print pairs[0]
+(3, 4)
+
+
+"
+Lv. 1,사이냅소프트 면접문제,"
+출처 : http://okjsp.net/bbs?seq=92230
+
+주어진 문자열(공백 없이 쉼표로 구분되어 있음)을 가지고 아래 문제에 대한 프로그램을 작성하세요.
+
+이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌
+
+
+김씨와 이씨는 각각 몇 명 인가요?
+""이재영""이란 이름이 몇 번 반복되나요?
+중복을 제거한 이름을 출력하세요.
+중복을 제거한 이름을 오름차순으로 정렬하여 출력하세요.
+
+",Byun Seongjun 변성준,"
+1번문제 김씨와 이씨 각각 카운트 해야한다는 지적 감사합니다~
+수정했어요.
+names = ""이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌"".split("","")
+
+#1
+a=[ i[0] for i in names ]
+print(""김씨 : %d\n이씨 : %d\n""%(a.count(""김""), a.count(""이"")))
+
+#2
+print(names.count(""이재영""))
+
+#3
+uniq_names = list(set(names))
+print(uniq_names)
+
+#4
+uniq_names.sort()
+print(uniq_names)
+
+"
+Lv. 1,Special Sort,"
+출처 : http://www.careercup.com/question?id=5201559730257920
+구글 전화면접 문제
+
+n개의 정수를 가진 배열이 있다. 이 배열은 양의정수와 음의 정수를 모두 가지고 있다. 이제 당신은 이 배열을 좀 특별한 방법으로 정렬해야 한다. 
+정렬이 되고 난 후, 음의 정수는 앞쪽에 양의정수는 뒷쪽에 있어야 한다. 또한 양의정수와 음의정수의 순서에는 변함이 없어야 한다.
+
+예. -1 1 3 -2 2 ans: -1 -2 1 3 2.
+
+",Byun Seongjun 변성준,"
+음, 양의 정수를 각각 필터링해 모은 두 리스트를 합칩니다. 
+구글은 파이썬을 좋아하긴 하나 보네요.
+def do(alist):
+    return [x for x in alist if x < 0] + [x for x in alist if x >= 0]
+
+print do([-1, 1, 3, -2, 2])
+
+근데 문제가 너무 간단한데 왠지 in-place로 풀어야하는 제약이 있는게 합당해보입니다. 그렇다고 하면 위에 이인욱님께서 푸신 방법이 맞습니다. (아마존 면접문제하고도 비슷하네요)
+"
+Lv. 1,10진수를 n진수로 변환하기,"
+다음은 233 이란 10진수를 2진수로 변환하는 과정을 나타낸 그림이다.
+
+위 그림을 참조하여 라이브러리를 사용하지 말고 10진수를 n진수로 변환하는 프로그램을 작성하시오.. (단, n의 범위는 2 <= n <= 16)
+예)
+
+2진수로 변환 : 23310 --> 111010012
+8진수로 변환 : 23310 --> 3518
+16진수로 변환 : 23310 --> E916
+
+",김영성,"
+재귀로 풀어 보았습니다.
+def convert(n, base):
+    T = ""0123456789ABCDEF""
+    q, r = divmod(n, base)
+    if q == 0:
+        return T[r]
+    else:
+        return convert(q, base) + T[r]
+
+
+print convert(233, 2)
+print convert(233, 8)
+print convert(233, 16)
+
+"
+Lv. 1,3이 나타나는 시간을 전부 합하면?,"
+디지털 시계에 하루동안(00:00~23:59) 3이 표시되는 시간을 초로 환산하면 총 몇 초(second) 일까요? 
+디지털 시계는 하루동안 다음과 같이 시:분(00:00~23:59)으로 표시됩니다.
+00:00 (60초간 표시됨)
+00:01 
+00:02 
+...
+23:59
+
+",715,"
+Python으로 해 보았습니다.
+결과는 29,700초 나왔습니다.
+sumSec=0    # 초의 총합을 저장할 변수
+for hour in range(24) :     # 시간
+    for minute in range(60) :   #분
+        if '3' in str(hour) or '3' in str(minute) : # 시간이나 분에 3이 들어가면
+            sumSec += 60            # 60초씩 더함
+print(sumSec)
+
+"
+Lv. 1,메모리공간을 동적으로 사용하여 데이터 관리하기,"
+프로그램 실행 순서
+
+입력할 정수의 개수를 사용자로부터 입력 받는다.
+입력받은 정수의 개수만큼 정수를 입력받는다.
+입력받은 정수의 합과 평균 값을 출력한다.
+할당된 메모리공간을 비운다.
+
+요구사항 
+
+메모리공간은 사용자의 입력 수의 따라 변동된다.
+사용한 공간은 마지막에 비워야 한다.
+배열을 사용하면 안된다.
+
+",Analyticsstory,"
+ 1 #include <iostream>
+  2 #include <cstring>
+  3 using namespace std;
+  4 
+  5 int main()
+  6 {
+  7     int *a;
+  8     a = new int;
+  9     cout << ""메모리양을 정하시오. : "";
+ 10     cin >> *a;
+ 11     cout << endl << endl;
+ 12     
+ 13     int *num;
+ 14     num = new int(*a);
+ 15     cout << ""입력받을 정수의 개수를 정하시오: "";
+ 16     cin >> *num;
+ 17     
+ 18     int *count;
+ 19     count = new int(*a);
+ 20     
+ 21     int *total;
+ 22     total = new int(*a);
+ 23     
+ 24     for (int i=0;i<*num;i++){
+ 25         cout << i+1 << "" 번째 숫자 입력 : "";
+ 26         cin >> *count; 
+ 27         *total += *count;
+ 28     }
+ 29     cout << ""입력된 정수의 합은 : "" << *total - *a << endl;
+ 30     cout << ""입력된 정수의 평균은 : "" << double(*total - *a) / double(*num) << endl;
+ 31     
+ 32     delete a;
+ 33     delete num;
+ 34     delete count;
+ 35     delete total;
+ 36 }   
+
+
+"
+Lv. 1,CamelCase를 Pothole_case 로 바꾸기!,"
+파이썬과 같은 몇몇 프로그래밍 언어는 Pothole_case 를 더 선호하는 언어라고 합니다.
+Example:
+codingDojang --> coding_dojang
+numGoat30 --> num_goat_3_0
+위 보기와 같이 CameleCase를 Pothole_case 로 바꾸는 함수를 만들어요!
+출처: UT past test
+",Analyticsstory,"
+파이썬입니다.
+import re
+
+pc = lambda src: re.sub(""([A-Z0-9])"", lambda m:""_""+m.group().lower(), src)
+
+print(pc(""codingDojang""))  # coding_dojang
+print(pc(""numGoat30""))     # num_goat_3_0
+
+첫번째 문자가 대문자인 경우는 생각하지 않고 대문자나 숫자인 경우 무조건 ""_""+소문자로 변경하도록 했습니다.
+"
+Lv. 1,Duplicate Numbers,"
+일전에 뭐 게임 회사에서 본 간단한 퀴즈 테스트 입니다.
+0~9까지의 문자로 된 숫자를 입력 받았을 때, 이 입력 값이 0~9까지의 숫자가 각각 한 번 씩만 사용된 것인지 확인하는 함수를 구하시오.
+
+
+sample inputs:
+0123456789
+01234
+01234567890
+6789012345
+012322456789
+
+
+sample outputs:
+true
+false
+false
+true
+false
+
+
+",Byam_Gyu,"
+python 2.7.8입니다. 
+입력값을 sorting해서 0123456789 와 비교하는 방법을 썼습니다.
+n = [''.join(sorted(x)) for x in raw_input().split()]
+for x in n:
+    print ""true"" if x==""0123456789"" else ""false"",
+
+"
+Lv. 1,가성비 최대화,"
+기계를 구입하려 하는데 이 기계는 추가 부품을 장착할 수 있다.
+추가 부품은 종류당 하나씩만 장착 가능하고, 모든 추가 부품은 동일한 가격을 가진다.
+원래 기계의 가격과 성능, 추가 부품의 가격과 각 부품의 성능이 주어졌을 때, 추가 부품을 장착하여 얻을 수 있는 최대 가성비를 정수 부분까지 구하시오(가격 및 성능은 상대적인 값으로 수치화되어 주어진다).
+e.g.)
+원래 기계의 가격 : 10
+원래 기계의 성능 : 150
+추가 부품의 가격 : 3
+추가 부품의 성능 : 각각 30, 70, 15, 40, 65
+추가 부품을 장착하여 얻을 수 있는 최대 가성비 : 17.81... → 17
+(성능이 70과 65인 부품을 장착하면 됨)
+",김호현,"
+orp = 10
+org = 150
+adp = 3
+adg = [30, 70, 15, 40, 65]
+
+adg.sort(reverse=True)
+
+for i in adg :
+    if  org / orp > ( org + i ) / ( orp + adp )  :
+        break
+    else : org += i ; orp += adp 
+
+print int( org / orp )
+
+
+"
+Lv. 1,h-index & g-index,"
+연구자의 연구업적을 평가할 때 사용되는 지표 중 h-index와 g-index라는 것이 있다.
+
+h-index : 인용 횟수가 h번 이상인 논문이 h개일 때 가능한 h의 최댓값
+g-index : 인용 횟수가 높은 상위 g개 논문의 인용 횟수 총합이 g²이상일 때 가능한 g의 최댓값
+
+어떤 학자가 쓴 논문 각각의 인용 횟수가 주어질 때, h-index와 g-index를 계산하시오.
+e.g.)
+
+입력 : 0 15 4 0 7 10 0
+h-index : 4
+g-index : 6
+
+",임지호,"
+# 한글 처리 in Atom 1.21.1 + Anaconda(Python 3.6.3)
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
+
+# 연구자의 연구업적을 평가할 때 사용되는 지표 중 h-index와 g-index라는 것이 있다.
+# h-index : 인용 횟수가 h번 이상인 논문이 h개일 때 가능한 h의 최댓값
+# g-index : 인용 횟수가 높은 상위 g개 논문의 인용 횟수 총합이 g²이상일 때 가능한 g의 최댓값
+# 어떤 학자가 쓴 논문 각각의 인용 횟수가 주어질 때, h-index와 g-index를 계산하시오.
+
+quotations = [0, 15, 4, 0, 7, 10, 0]
+
+# h-index
+for h in range(min(max(quotations), len(quotations)), 0, -1):
+    count = 0
+    for number in quotations:
+        if number >= h:
+            count += 1
+    if count == h:
+        print(""h-index ="", h)
+        break
+
+# g-index
+quotations.sort(reverse=True)
+for g in range(len(quotations), 0, - 1):
+    if sum(quotations[0:g]) >= g**2:
+        print(""g-index ="", g)
+        break
+
+
+"
+Lv. 1,Printing OXs,"
+(앞의 문제들 중 비슷한 알고리즘이 있던 것 같지만, 같은 건 없다고 생각해서 올립니다.)
+input은 int n을 입력 받아 첫번째 row는 (n-1)의 O와 X, 두번째 row는 (n-2)의 O와 XX, 세번째 row는 (n-3)의 0와 XXX... n번째 row는 n의 X을 출력하시오.
+입력 예시: 6
+출력 예시:
+
+OOOOOX
+OOOOXX
+OOOXXX
+OOXXXX
+OXXXXX
+XXXXXX
+
+",Byam_Gyu,"
+Python 2.7입니다.
+def input_num(n):
+    for i in range(1,n+1):
+        print (""O"" * (n-i) + (""X"" * i))
+
+input_num(6)
+
+OOOOOX
+OOOOXX
+OOOXXX
+OOXXXX
+OXXXXX
+XXXXXX
+"
+Lv. 1,버전비교,"
+A씨는 두 개의 버전을 비교하는 프로그램을 작성해야 한다.
+버전은 다음처럼 ""."" 으로 구분된 문자열이다.
+버전 예) 1.0.0, 1.0.23, 1.1
+두 개의 버전을 비교하는 프로그램을 작성하시오.
+다음은 버전 비교의 예이다.
+0.0.2 > 0.0.1
+1.0.10 > 1.0.3
+1.2.0 > 1.1.99
+1.1 > 1.0.1
+
+",715,"
+파이썬입니다
+from itertools import zip_longest
+
+def compare(left, right):
+    left_vars = map(int, left.split('.'))
+    right_vars = map(int, right.split('.'))
+    for a, b in zip_longest(left_vars, right_vars, fillvalue = 0):
+        if a > b:
+            return '>'
+        elif a < b:
+            return '<'
+    return '='
+
+CASES = [['0.0.2', '0.0.1'],
+         ['1.0.10', '1.0.3'],
+         ['1.2.0', '1.1.99'],
+         ['1.1', '1.0.1']]
+
+if __name__ == '__main__':
+    for case in CASES:
+        print('{0[0]} {1} {0[1]}'.format(case, compare(*case)))
+
+"
+Lv. 1,1~1000에서 각 숫자의 개수 구하기,"
+예로 10 ~ 15 까지의 각 숫자의 개수를 구해보자  
+10 = 1, 0
+11 = 1, 1
+12 = 1, 2
+13 = 1, 3
+14 = 1, 4
+15 = 1, 5  
+그러므로 이 경우의 답은 0:1개, 1:7개, 2:1개, 3:1개, 4:1개, 5:1개
+",황예환,"
+파이썬3.4
+from collections import defaultdict
+
+d = defaultdict(int)
+for n in range(1, 1001):
+    for x in str(n):
+        d[x] += 1
+
+print(d)
+
+"
+Lv. 1,10~1000까지 각 숫자 분해하여 곱하기의 전체 합 구하기,"
+예로, 10~15까지의 각 숫자 분해하여 곱하기의 전체 합은 다음과 같다.  
+10 = 1 * 0 = 0
+11 = 1 * 1 = 1
+12 = 1 * 2 = 2
+13 = 1 * 3 = 3
+14 = 1 * 4 = 4
+15 = 1 * 5 = 5  
+그러므로, 이 경우의 답은 0+1+2+3+4+5 = 15
+",Byam_Gyu,"
+파이썬 3.5.1
+print(sum(eval('*'.join(str(x))) for x in range(10,1001)))
+
+C++
+#include <iostream>
+using namespace std;
+
+int main(){
+  int result;
+  for(int x=0;x<=990;x++){
+    string st = to_string(x+10);
+    int temp = 1;
+    for(int y=0; y<st.length(); y++){
+        temp *= st.at(y) - '0';
+    }
+    result += temp;
+  }
+  cout << result;
+    return 0;
+}
+
+자바
+public class MyClass {
+    public static void main(String[] args){
+        String[] list = new String[991];
+        int result = 0;
+        for(int x = 10; x < 1001; x++){
+            list[x-10] = """"+x;
+        }
+        for(String i:list){
+            char[] temp = i.toCharArray();
+            int mul = 1;
+            for(char j:temp){
+                mul *= Character.getNumericValue(j);
+            }
+            result += mul;
+        }
+        System.out.println(result);
+    }
+}
+
+저 루비로 짠 코드를 보고 어떻게 하면 더 짧아질려나 한참을 고민했습니다. 합성함수를 연속으로 하지도 못하고...
+"
+Lv. 1,Dash Insert,"
+DashInsert 함수는 숫자로 구성된 문자열을 입력받은 뒤, 문자열 내에서 홀수가 연속되면 두 수 사이에 - 를 추가하고, 짝수가 연속되면 * 를 추가하는 기능을 갖고 있다. (예, 454 => 454, 4546793 => 454*67-9-3) DashInsert 함수를 완성하자. 출처
+
+입력 - 화면에서 숫자로 된 문자열을 입력받는다.
+
+""4546793""
+
+
+출력 - *, -가 적절히 추가된 문자열을 화면에 출력한다.
+
+""454*67-9-3""
+
+",DARK4Hoon,"
+import re
+print(re.sub(r'(([02468]{2,})|([13579]{2,}))', lambda x:'*'.join(x.group(2)) if x.group(2) else '-'.join(x.group(3)), input("":"")))
+
+
+Python 3.5.2에서 작성하였습니다.
+"
+Lv. 1,완전수 구하기,"
+자기 자신을 제외한 모든 양의 약수들의 합이 자기 자신이 되는 자연수를 완전수라고 한다. 예를 들면, 6과 28은 완전수이다.
+6=1+2+3        // 1,2,3은 각각 6의 약수
+28=1+2+4+7+14  // 1,2,4,7,14는 각각 28의 약수
+입력으로 자연수 N을 받고, 출력으로 N 이하의 모든 완전수를 출력하는 코드를 작성하라.
+",강승규,"
+파이썬 3로 짧게 구현해봤습니다.
+num= int(input(""숫자를 입력하시오 : ""))
+print([x for x in range(1, num+1) if x==sum(y for y in range(1, x) if x%y==0)])
+
+"
+Lv. 1,Even Fibonacci numbers,"
+출처 : 프로젝트 오일러 2번문제, 한글 번역판
+
+피보나치 수열의 각 항은 바로 앞의 항 두 개를 더한 것이 됩니다. 1과 2로 시작하는 경우 이 수열은 아래와 같습니다.
+1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... 
+짝수이면서 4백만 이하인 모든 항을 더하면 얼마가 됩니까?
+",김영성,"
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        for(int i=1;;i++){//피보나치 수열을 list에 저장 list에 들어간 값이 400만을 넘으면 멈춤
+            list.add(list.get(i-1)+list.get(i));
+            if(list.get(i-1)+list.get(i)>4000000)
+                break;
+        }
+
+        list.remove(list.get(list.size()-1));//list에 마지막 인덱스 값을 제거(400만 넘으니깐)
+        int sum=0;
+        for(int i=0;i<list.size();i++){//짝수인 총합
+            if(list.get(i)%2==0)
+                sum+=list.get(i);
+        }
+        System.out.println(sum);
+
+
+    }
+
+
+답은 4613732
+"
