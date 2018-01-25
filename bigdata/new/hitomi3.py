@@ -19,7 +19,6 @@ options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
 options.add_argument("disable-gpu")
 
-# path ='.\\selenium\\webdriver\\chromedriver'
 path = 'C:\\Python_exercise\\Jumptopy\\bigdata\\new\\chromedriver'
 
 
@@ -32,7 +31,6 @@ def rep(a):       #파일 이름 특수문자 처리
             rep+=c
         else: rep+=c
     return rep
-
 
 def download(url, file_name):             # 파일 저장 함수
     with open(file_name, "wb") as file:
@@ -53,7 +51,8 @@ def zip(src_path, dest_file):
 def get_link():
     m_list = []
     image_list = []
-    select = input("1:작가명으로 검색 2:품번으로 검색\n입력:")
+    print("<<< 히토미 크롤러 ver0.3 >>>")
+    select = input("1:작가명으로 검색 2:품번으로 받기\n입력:")
     if select == '1':
         artist = input("작가명을 입력하세요:")
         artist_=''
@@ -75,18 +74,20 @@ def get_link():
                     a = list(i.strings)[0].split(',')[-1]
                     index+=a[1:a.index(')')]
             except:pass
-
-        for i in range(1,int(index)+1):
-            URL ='https://hitomi.la/artist/%s-korean-%s.html'%(artist_,str(i))
-            html = requests.get(URL).text
-            soup = BeautifulSoup(html,'lxml')
-            aa =soup.find_all('h1')
-
+        try:
+            for i in range(1,int(index)+1):
+                URL ='https://hitomi.la/artist/%s-korean-%s.html'%(artist_,str(i))
+                html = requests.get(URL,headers=hdr).text
+                soup = BeautifulSoup(html,'lxml')
+                aa =soup.find_all('h1')
             for i in aa:
                 sub = list(i.strings)[0]
                 link = list(i.a.attrs.values())[0]
                 link= link.replace('galleries','reader')
                 m_list.append('https://hitomi.la'+link+'  '+rep(sub))
+        except:
+            print("정확한 작가명을 입력하세요.")
+            return get_link()
 
         for i in range(len(m_list)):
             print(str(i+1)+' : '+m_list[i][m_list[i].index('  ')+2:])
@@ -144,7 +145,13 @@ def get_link():
             break
 
         url = 'https://hitomi.la/reader/%s.html#1'% link
-        driver = webdriver.Chrome(path, chrome_options=options)
+
+        if getattr(sys,'frozen',False):
+            # executed as a bundled exe, the driver is in the extracted folder
+            chromedriver_path = os.path.join(sys._MEIPASS, "chromedriver.exe")
+            driver = webdriver.Chrome(chromedriver_path, chrome_options=options)
+        else:driver = webdriver.Chrome(path, chrome_options=options)
+
         driver.get(url)
         driver.implicitly_wait(3)
         html3 = driver.page_source
@@ -169,7 +176,9 @@ def get_link():
             image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist)
 
         return image_list
-
+    else:
+        print("제대로 입력하세요:")
+        return get_link()
 
 def get_image(image_list):
 
@@ -186,7 +195,6 @@ def get_image(image_list):
     download(i_link, "c:/hitomi/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name)))
     try: os.mkdir("hitomi")
     except:pass
-    # zip("c:/hitomi/[%s]%s/"%(i_artist,i_dir_name),'c:hitomi/[%s]%s.zip'%(i_artist,i_dir_name))
     t = i_artist, i_dir_name
     return t
 
@@ -197,9 +205,14 @@ if __name__=='__main__':
             multiprocessing.freeze_support()
 
         start_time = time.time()
-        print("<<< 히토미 크롤러 ver0.1 >>>")
+
         pool = Pool(processes=16)
-        t = pool.map(get_image, get_link())[0]
+        try:
+            t = pool.map(get_image, get_link())[0]
+        except:
+            print("정확한 품번을 입력하세요.")
+            continue
+
         i_artist = t[0]
         i_dir_name = t[1]
         zip("c:/hitomi/[%s]%s/" % (i_artist, i_dir_name), 'c:/hitomi/[%s]%s.zip' % (i_artist, i_dir_name))

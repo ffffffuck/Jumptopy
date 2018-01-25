@@ -39,7 +39,13 @@ def get_link():
             print("\n?? 제대로 입력 하셈")
             return get_link()
 
-        html = requests.get(URL,headers=hdr5).text
+        if random.randint(1, 6) == 1:hdr = hdr1
+        elif random.randint(1, 6) == 2:hdr = hdr2
+        elif random.randint(1, 6) == 3:hdr = hdr3
+        elif random.randint(1, 6) == 4:hdr = hdr4
+        else:hdr = hdr5
+
+        html = requests.get(URL,headers=hdr).text
         soup = BeautifulSoup(html, 'lxml')
         imagelist = soup.find_all('a',attrs={"class":icon})
         gall_subject = soup.find_all('meta',attrs={"name":"title"})
@@ -89,13 +95,14 @@ def get_image(URL_list):
       time.sleep(5)
 
 
-hdr1 ={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)'}
-hdr2 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win32; x32)'}
-hdr3 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64)'}
-hdr4 ={'User-Agent': 'Chrome/63.0.3239.132 Safari/537.36)'}
-hdr5 ={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
+hdr1 ={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)','referer':'http://m.dcinside.com/api/view_img.php'}
+hdr2 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win32; x32)','referer':'http://m.dcinside.com/api/view_img.php'}
+hdr3 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64)','referer':'http://m.dcinside.com/api/view_img.php'}
+hdr4 ={'User-Agent': 'Chrome/63.0.3239.132 Safari/537.36)','referer':'http://m.dcinside.com/api/view_img.php'}
+hdr5 ={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)','referer':'http://m.dcinside.com/api/view_img.php'}
 hdr = 0
 
+# referer = {'referer':'http://m.dcinside.com/api/view_img.php'}
 
 if __name__=='__main__':
     # On Windows calling this function is necessary.

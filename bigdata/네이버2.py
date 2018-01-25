@@ -6,7 +6,6 @@ import urllib.parse
 app_id = 'fa3DutqmjtzFfQwTY1rb'
 app_pw = 'j8VS_WXzZ3'
 
-
 def rep(a):
     a = a.replace('&quot;', '"')
     a = a.replace('<b>','')
@@ -70,7 +69,6 @@ def main():
         for post in jsonSearch['items']:
             post['title'] = rep(post['title'])
             post['description'] = rep(post['description'])
-            print(post['originallink'])
             getPostData(post,jsonResult)
 
         nStart = jsonSearch['start']+jsonSearch['display']
@@ -79,10 +77,10 @@ def main():
 
     with open('%s_naver_%s.json'%(search_text,sNode),'w',encoding='utf8') as outfile:
         retJson = json.dumps(jsonResult,indent=4,sort_keys=True,ensure_ascii=False)
-
-
         outfile.write(retJson)
         print("%s_naver_%s.json SAVED"%(search_text,sNode))
 
+
 if __name__=='__main__':
     main()
+
