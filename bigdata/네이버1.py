@@ -80,6 +80,6 @@ def main():
     with open('%s_naver_%s.json'%(search_text,sNode),'w',encoding='utf8') as outfile:
         retJson = json.dumps(jsonResult,indent=4,sort_keys=True,ensure_ascii=False)
         outfile.write(retJson)
-
+    print(len(jsonResult))
 if __name__=='__main__':
     main()
