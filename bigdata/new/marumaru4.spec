@@ -3,9 +3,9 @@
 block_cipher = None
 
 
-a = Analysis(['hitomi3.py'],
+a = Analysis(['marumaru4.py'],
              pathex=['C:\\Python_exercise\\Jumptopy\\bigdata\\new'],
-             binaries=[('C:\\Python_exercise\\Jumptopy\\bigdata\\new\\chromedriver.exe','.')],
+             binaries=[],
              datas=[],
              hiddenimports=[],
              hookspath=[],
@@ -21,9 +21,9 @@ exe = EXE(pyz,
           a.binaries,
           a.zipfiles,
           a.datas,
-          name='hitomi3',
+          name='marumaru4',
           debug=False,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True , uac_admin=True )
+          console=True , uac_admin=True)

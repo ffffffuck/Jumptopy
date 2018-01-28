@@ -8,6 +8,17 @@ from multiprocessing import Pool
 import sys
 import os
 
+
+def rep(a):       #파일 이름 특수문자 처리
+    rep=""
+    b = ['\\','/',':','*','?','"','<','>','|',' ']
+    for c in a:
+        if c in b :
+            c=''
+            rep+=c
+        else: rep+=c
+    return rep
+
 def download(url, file_name):             # 파일 저장 함수
     with open(file_name, "wb") as file:
         response = get(url)
@@ -43,18 +54,23 @@ def get_link():
         elif random.randint(1, 6) == 2:hdr = hdr2
         elif random.randint(1, 6) == 3:hdr = hdr3
         elif random.randint(1, 6) == 4:hdr = hdr4
-        else:hdr = hdr5
+        else: hdr = hdr5
 
-        html = requests.get(URL,headers=hdr).text
-        soup = BeautifulSoup(html, 'lxml')
-        imagelist = soup.find_all('a',attrs={"class":icon})
-        gall_subject = soup.find_all('meta',attrs={"name":"title"})
-        sub= list(gall_subject[0].attrs.values())[1]
+        r = requests.get(URL,headers=hdr)
+        if r.status_code == 200:
+            html = r.text
+            soup = BeautifulSoup(html, 'lxml')
+            imagelist = soup.find_all('a',attrs={"class":icon})
+            gall_subject = soup.find_all('meta',attrs={"name":"title"})
+            sub= list(gall_subject[0].attrs.values())[1]
 
-        for i in imagelist:
-            a= list(i.attrs.values())[0]
-            inURL='http://gall.dcinside.com'+a
-            URL_list.append(inURL+"  "+sub)
+            for i in imagelist:
+                a= list(i.attrs.values())[0]
+                inURL='http://gall.dcinside.com'+a
+                URL_list.append(inURL+"  "+sub)
+        else:
+            print('연결실패')
+            exit()
 
     return URL_list
 
@@ -62,38 +78,56 @@ def get_image(URL_list):
       sub = URL_list[URL_list.index('  ')+2:]
       inURL = URL_list[:URL_list.index('  ')]
       g_time = time.strftime("%Y%m%d",time.localtime(time.time()))
+
       if random.randint(1, 6) == 1:hdr = hdr1
       elif random.randint(1, 6) == 2:hdr = hdr2
       elif random.randint(1, 6) == 3:hdr = hdr3
       elif random.randint(1, 6) == 4:hdr = hdr4
       else:hdr = hdr5
 
-      # proxies = {'http':'138.197.45.244:80'}
+      r2 = ''
+      while r2 == '':
+          try:
+              r2 = requests.get(inURL,headers=hdr)
+          except:
+              print("Connection refused by the server..")
+              print("Let me sleep for 5 seconds")
+              print("ZZzzzz...")
+              time.sleep(5)
+              print("Was a nice sleep, now let me continue...")
+              continue
 
-      html2 = requests.get(inURL,headers=hdr).text
-      soup2 = BeautifulSoup(html2,'lxml')
-      image_scorll = soup2.find_all("li",attrs={'class':'icon_pic'})
+      if r2.status_code == 200:
+          html2 = r2.text
+          soup2 = BeautifulSoup(html2,'lxml')
+          image_scorll = soup2.find_all("li",attrs={'class':'icon_pic'})
+
+          for i in image_scorll:
+              b = (list(i.a.attrs.values())[0])
+              b = b.replace('download.php', 'viewimage.php')
+              image_name = i.text
 
 
-      for i in image_scorll:
-          b = (list(i.a.attrs.values())[0])
-          b = b.replace('download.php', 'viewimage.php')
-          image_name = list(i.strings)[0]
+              if os.path.isdir("짤방"):
+                  pass
+              else:os.mkdir("짤방")
 
-          if os.path.isdir("짤방"):
-              pass
-          else:os.mkdir("짤방")
+              if os.path.isdir("짤방/"+g_time+'_'+sub):
+                  pass
+              else:os.mkdir("짤방/"+g_time+'_'+sub)
 
-          if os.path.isdir("짤방/"+g_time+'_'+sub):
-              pass
-          else:os.mkdir("짤방/"+g_time+'_'+sub)
-          if os.path.isfile('짤방/'+g_time+'_'+sub + '/' + image_name):
-              pass
-          else:
-            download(b, '짤방/'+g_time+'_'+sub + '/' + image_name)
-            print('[%s] 받고 있습니다..' % image_name)
-      time.sleep(5)
-
+              if os.path.isfile('짤방/'+g_time+'_'+sub + '/' + image_name):
+                  pass
+              else:
+                  try:
+                      download(b, '짤방/'+g_time+'_'+sub + '/' + image_name)
+                      print('[%s] 받고 있습니다..' % image_name)
+                  except:
+                      download(b, '짤방/' + g_time + '_' + sub + '/' + rep(image_name))
+                      print('[%s] 받고 있습니다..' % image_name)
+      else:
+          print('연결실패')
+          exit()
 
 hdr1 ={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6)','referer':'http://m.dcinside.com/api/view_img.php'}
 hdr2 ={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win32; x32)','referer':'http://m.dcinside.com/api/view_img.php'}
@@ -102,7 +136,6 @@ hdr4 ={'User-Agent': 'Chrome/63.0.3239.132 Safari/537.36)','referer':'http://m.d
 hdr5 ={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)','referer':'http://m.dcinside.com/api/view_img.php'}
 hdr = 0
 
-# referer = {'referer':'http://m.dcinside.com/api/view_img.php'}
 
 if __name__=='__main__':
     # On Windows calling this function is necessary.

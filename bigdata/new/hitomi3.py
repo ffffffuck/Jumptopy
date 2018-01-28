@@ -74,17 +74,19 @@ def get_link():
                     a = list(i.strings)[0].split(',')[-1]
                     index+=a[1:a.index(')')]
             except:pass
+
         try:
             for i in range(1,int(index)+1):
                 URL ='https://hitomi.la/artist/%s-korean-%s.html'%(artist_,str(i))
                 html = requests.get(URL,headers=hdr).text
                 soup = BeautifulSoup(html,'lxml')
                 aa =soup.find_all('h1')
-            for i in aa:
-                sub = list(i.strings)[0]
-                link = list(i.a.attrs.values())[0]
-                link= link.replace('galleries','reader')
-                m_list.append('https://hitomi.la'+link+'  '+rep(sub))
+
+                for i in aa:
+                    sub = i.text
+                    link = list(i.a.attrs.values())[0]
+                    link= link.replace('galleries','reader')
+                    m_list.append('https://hitomi.la'+link+'  '+rep(sub))
         except:
             print("정확한 작가명을 입력하세요.")
             return get_link()

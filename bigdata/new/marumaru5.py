@@ -120,7 +120,7 @@ def get_link():       #첫페이지 파싱
         comic = comic[int(sel1)-1:]
 
     return comic
-
+#
 def get_image(comic):
     comic_URL = comic[comic.index('h'):comic.index('  ')]
     comic_name = comic[comic.index('  ')+2:]
@@ -132,7 +132,7 @@ def get_image(comic):
     for j in comic_content:
         try:os.mkdir('C:/Windows/Temp/marumaru/%s/%s' % (rep(comic_dir_name),rep(comic_name)))
         except:pass
-        co = 'http://wasabisyrup.com' + j.get('data-src')
+        co = 'http://wasabisyrup.com' + list(j.attrs.values())[2]
         download(co, 'C:/Windows/Temp/marumaru/%s/%s/%s.jpg' % (rep(comic_dir_name), rep(comic_name), count))
         down = int(((comic_content.index(j)+1)/len(comic_content))*100)
         sys.stdout.write('\r'+rep(comic_name)+' : '+str(down)+'%...')

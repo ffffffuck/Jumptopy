@@ -4,6 +4,7 @@ import sys
 import requests
 import time
 import multiprocessing
+import mechanicalsoup
 import zipfile
 import shutil
 from multiprocessing import Pool
@@ -21,6 +22,18 @@ options.add_argument("disable-gpu")
 
 path = 'C:\\Python_exercise\\Jumptopy\\bigdata\\new\\chromedriver'
 
+def down_bar(a):
+    if a < 10 :return '□□□□□□□□□□'
+    elif 10 <= a < 20 : return '■□□□□□□□□□'
+    elif 20 <= a < 30 :return '■■□□□□□□□□'
+    elif 30 <= a < 40: return '■■■□□□□□□□'
+    elif 40 <= a < 50:return '■■■■□□□□□□'
+    elif 50 <= a < 60:return '■■■■■□□□□□'
+    elif 60 <= a < 70:return '■■■■■■□□□□'
+    elif 70 <= a < 80:return '■■■■■■■□□□'
+    elif 80 <= a < 90:return '■■■■■■■■□□'
+    elif 90 <= a < 100:return '■■■■■■■■■□'
+    elif a == 100 : return '■■■■■■■■■■'
 
 def rep(a):       #파일 이름 특수문자 처리
     rep=""
@@ -51,7 +64,7 @@ def zip(src_path, dest_file):
 def get_link():
     m_list = []
     image_list = []
-    print("<<< 히토미 크롤러 ver0.3 >>>")
+    print("<<< 히토미 크롤러 ver0.4 >>>")
     select = input("1:작가명으로 검색 2:품번으로 받기\n입력:")
     if select == '1':
         artist = input("작가명을 입력하세요:")
@@ -74,17 +87,19 @@ def get_link():
                     a = list(i.strings)[0].split(',')[-1]
                     index+=a[1:a.index(')')]
             except:pass
+
         try:
             for i in range(1,int(index)+1):
                 URL ='https://hitomi.la/artist/%s-korean-%s.html'%(artist_,str(i))
                 html = requests.get(URL,headers=hdr).text
                 soup = BeautifulSoup(html,'lxml')
                 aa =soup.find_all('h1')
-            for i in aa:
-                sub = list(i.strings)[0]
-                link = list(i.a.attrs.values())[0]
-                link= link.replace('galleries','reader')
-                m_list.append('https://hitomi.la'+link+'  '+rep(sub))
+
+                for i in aa:
+                    sub = i.text
+                    link = list(i.a.attrs.values())[0]
+                    link= link.replace('galleries','reader')
+                    m_list.append('https://hitomi.la'+link+'  '+rep(sub))
         except:
             print("정확한 작가명을 입력하세요.")
             return get_link()
@@ -95,7 +110,8 @@ def get_link():
 
         link_name = m_list[int(pick)-1]
         image_link = link_name[:link_name.index('  ')]
-        print('다운로드 준비중입니다...')
+        print(image_link)
+        print('%s 다운로드 준비중입니다...'%link_name[link_name.index('  ')+2:])
 
 
         if getattr(sys,'frozen',False):
@@ -127,7 +143,7 @@ def get_link():
         driver.quit()
 
         for i in range(len(manga_index_list)):
-            image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist)
+            image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist+'    '+str(len(manga_index_list)))
 
         return image_list
 
@@ -173,26 +189,31 @@ def get_link():
             manga_url = '%s/%s/%s/%s/%s/' % (a[0], a[1], a[2], a[3], a[4])
 
         for i in range(len(manga_index_list)):
-            image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist)
+            image_list.append('https:' + manga_url + manga_index_list[i] + '  ' + rep(manga_name)+'   '+artist+'    '+str(len(manga_index_list)))
 
+        driver.quit()
         return image_list
     else:
         print("제대로 입력하세요:")
         return get_link()
 
 def get_image(image_list):
-
     i_link = image_list[:image_list.index('  ')]
-    i_dir_name = image_list[image_list.index(' ')+2:image_list.index('   ')]
-    i_artist = image_list[image_list.index('   ')+3:]
+    i_dir_name = image_list[image_list.index('  ')+2:image_list.index('   ')]
+    i_artist = image_list[image_list.index('   ')+3:image_list.index('    ')]
+    list_len = image_list[image_list.index('    ')+4:]
     i_name = i_link.split('/')[-1]
 
-    try:os.mkdir("c:/hitomi")
+    try:os.mkdir("C:/Windows/Temp/hitomi")
     except:pass
-    try:os.mkdir("c:/hitomi/[%s]%s"%(i_artist,i_dir_name))
+    try:os.mkdir("C:/Windows/Temp/hitomi/[%s]%s"%(i_artist,i_dir_name))
     except:pass
-    print('%s폴더에 %s를 받는중...'%(i_dir_name,i_name))
-    download(i_link, "c:/hitomi/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name)))
+
+    download(i_link, "C:/Windows/Temp/hitomi/[%s]%s/%s"%(i_artist,i_dir_name,str(i_name)))
+    dirfile_len= len(next(os.walk('C:/Windows/Temp/hitomi/[%s]%s'%(i_artist,i_dir_name)))[2])
+
+    down = int((dirfile_len/int(list_len))*100)
+    sys.stdout.write('\r'+'다운로드 진행상태 : '+down_bar(down)+'{0:>3}'.format(down)+'%...')
     try: os.mkdir("hitomi")
     except:pass
     t = i_artist, i_dir_name
@@ -207,17 +228,13 @@ if __name__=='__main__':
         start_time = time.time()
 
         pool = Pool(processes=16)
-        try:
-            t = pool.map(get_image, get_link())[0]
-        except:
-            print("정확한 품번을 입력하세요.")
-            continue
+        t = pool.map(get_image, get_link())[0]
 
         i_artist = t[0]
         i_dir_name = t[1]
-        zip("c:/hitomi/[%s]%s/" % (i_artist, i_dir_name), 'c:/hitomi/[%s]%s.zip' % (i_artist, i_dir_name))
-        shutil.move('c://hitomi//[%s]%s.zip'%(i_artist,i_dir_name),'hitomi')
-        shutil.rmtree('c://hitomi')
+        zip("C:/Windows/Temp/hitomi/[%s]%s/" % (i_artist, i_dir_name), 'C:/Windows/Temp/hitomi/[%s]%s.zip' % (i_artist, i_dir_name))
+        shutil.move('C:/Windows/Temp/hitomi//[%s]%s.zip'%(i_artist,i_dir_name),'hitomi')
+        shutil.rmtree('C:/Windows/Temp/hitomi/[%s]%s/' % (i_artist, i_dir_name))
         print("\n다운로드 완료")
-        #
+
         print("\n--- %s seconds ---\n" % (time.time() - start_time))
