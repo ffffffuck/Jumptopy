@@ -20,6 +20,7 @@ def get_request_url(url):
         if response.getcode() == 200:
             # print("\n[%s] Url Request Success"%datetime.datetime.now())
             return response.read().decode('utf-8')
+
     except Exception as e:
         pass
         # print(e)
@@ -31,10 +32,13 @@ def realtime_weather_info():
     end_point='http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastTimeData'
 
     times = datetime.datetime.now()
-    time1 = times+datetime.timedelta(hours=-1)
+    if int(times.strftime('%M')) < 45:
+        time1 = times+datetime.timedelta(minutes=-30)
+    elif int(times.strftime('%M')) >= 45:
+        time1 = times
     parameters = "?&_type=json&serviceKey="+access_key
     parameters += '&base_date=' + times.strftime("%Y%m%d")
-    parameters += '&base_time='+ time1.strftime('%H')+'00'
+    parameters += '&base_time='+ time1.strftime('%H%M')
     parameters += '&nx='+ str(89)
     parameters += '&ny='+ str(91)
 
@@ -49,11 +53,16 @@ def main():
     global jsonResult
     jsonResult = {}
     jsonData = realtime_weather_info()
-    hours = time1 + datetime.timedelta(hours=1)
+    if int(datetime.datetime.now().strftime('%M')) < 30:
+        hours = time1 + datetime.timedelta(hours=2)
+    elif int(datetime.datetime.now().strftime('%M')) >= 30:
+        hours = time1 + datetime.timedelta(hours=1)
+
     after_hour = hours.strftime("%H") + '00'
 
     for i in jsonData['response']['body']['items']['item']:
         if after_hour == str(i['fcstTime']):
+            jsonResult['예측시간'] = str(i['fcstTime'])[:2] + ':' + str(i['fcstTime'])[2:]
             if i['category'] =='LGT':
                 jsonResult['낙뢰'] =i['fcstValue']
             elif i['category'] == 'PTY':
@@ -65,8 +74,8 @@ def main():
             elif i['category'] == 'T1H':
                 jsonResult['기온'] = i['fcstValue']
 
-        jsonResult['예측시간'] = str(i['fcstTime'])[:2] +':'+str(i['fcstTime'])[2:]
 
+    print()
     for i in list(jsonResult.items()):
         print(i[0]+':'+str(i[1]))
 
@@ -79,7 +88,7 @@ def main():
     if int(jsonResult['강수형태']) > 0:
         if g_Balcony_Windows == False:
             g_Balcony_Windows = True
-            print("비 존나 오네요...문이 닫힙니당.")
+            print("30분 내로 비 겁나 온다네요...문을 닫습니당.")
         else: pass
 
 def main2():
@@ -87,10 +96,14 @@ def main2():
     global jsonResult
     jsonResult = {}
     jsonData = realtime_weather_info()
-    hours = time1 + datetime.timedelta(hours=1)
+    if int(datetime.datetime.now().strftime('%M')) < 30:
+        hours = time1 + datetime.timedelta(hours=2)
+    elif int(datetime.datetime.now().strftime('%M')) >= 30:
+        hours = time1 + datetime.timedelta(hours=1)
     after_hour = hours.strftime("%H") + '00'
 
     for i in jsonData['response']['body']['items']['item']:
+
         if after_hour == str(i['fcstTime']):
             if i['category'] == 'LGT':
                 jsonResult['낙뢰'] = i['fcstValue']
@@ -173,13 +186,11 @@ def smart_mode():
         else : print('정지')
 
     elif menu_num == 2:
+        g_AI_mode = not g_AI_mode
         print('현재 인공지능 모드: ', end='')
         if g_AI_mode == True: print('작동')
         else : print('정지')
-        g_AI_mode = not g_AI_mode
 
-        if g_AI_mode == True:
-            pass
 
     elif menu_num ==3:
         main()
@@ -193,23 +204,25 @@ def update_scheduler():
         else:
             if g_Balcony_Windows == True:
                 main2()
-                time.sleep(3600)
+                time.sleep(10)
             else: pass
 
-t = threading.Thread(target=update_scheduler)
-t.daemon = True
-t.start()
 
-print("<스마트 홈네트워크 시뮬레이션 프로그램 ver 1.0>")
-print("                                 - 이창현 -")
-while True:
-    print_main_menu()
-    menu_num = int(input("\n메뉴를 선택하세요: "))
+if __name__=='__main__':
+    t = threading.Thread(target=update_scheduler)
+    t.daemon = True
+    t.start()
 
-    if(menu_num == 1):
-        check_device_status()
-    elif(menu_num ==2):
-        control_device()
-    elif(menu_num == 3):
-        smart_mode()
-    else:break
+    print("<스마트 홈네트워크 시뮬레이션 프로그램 ver 1.0>")
+    print("                                 - 이창현 -")
+    while True:
+        print_main_menu()
+        menu_num = int(input("\n메뉴를 선택하세요: "))
+
+        if(menu_num == 1):
+            check_device_status()
+        elif(menu_num ==2):
+            control_device()
+        elif(menu_num == 3):
+            smart_mode()
+        else:break
