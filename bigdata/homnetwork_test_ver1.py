@@ -12,8 +12,8 @@ g_AI_mode = False
 g_humidifier = False
 g_dehumidifier = False
 
-# access_key="PUjPcu22uUk09DaNdDl6mkVTDoMG2QJWGhxwAeQVqybmmJfBDw%2F2kb0ziRxy0smbezEH77TXCv%2BfCYGP7OkDfw%3D%3D"
-access_key="i4zXtlcTwh041E8W0qOyGPnIggToM4lqBePqd5ZR8v4uJQ6WcXACinkJgll%2Fk0PYSSinPNRJL%2B07OvnTXPcHaA%3D%3D"
+access_key="PUjPcu22uUk09DaNdDl6mkVTDoMG2QJWGhxwAeQVqybmmJfBDw%2F2kb0ziRxy0smbezEH77TXCv%2BfCYGP7OkDfw%3D%3D"
+# access_key="i4zXtlcTwh041E8W0qOyGPnIggToM4lqBePqd5ZR8v4uJQ6WcXACinkJgll%2Fk0PYSSinPNRJL%2B07OvnTXPcHaA%3D%3D"
 
 def get_request_url(url):
     req = urllib.request.Request(url)
@@ -284,12 +284,17 @@ def print_device_status(device_name,devcie_status):
     if devcie_status == True : print("작동")
     else : print("정지")
 
+def print_device_status2(device_name,device_status):
+    print("%s 상태: "% device_name,end='')
+    if device_status == True: print('열림')
+    else : print('잠김')
+
 def check_device_status():
     print()
     print_device_status('난방기',g_Radiator)
-    print_device_status('가스밸브', g_Gas_Valve)
-    print_device_status('발코니(베란다) 창문', g_Balcony_Windows)
-    print_device_status('출입문 상태', g_Door)
+    print_device_status2('가스밸브', g_Gas_Valve)
+    print_device_status2('발코니(베란다) 창문', g_Balcony_Windows)
+    print_device_status2('출입문 상태', g_Door)
     print_device_status('가습기', g_humidifier)
     print_device_status('제습기',g_dehumidifier)
 
